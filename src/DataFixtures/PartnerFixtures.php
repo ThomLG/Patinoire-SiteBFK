@@ -10,11 +10,11 @@ class PartnerFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        $partner1=new Partner();
+        $partner1=new Partner(); // on crée un nouveau partner
         $partner1->setPartnerName('Gwenneg');
         $partner1->setPartnerDescription("Gwenneg sponsor 1");
         $partner1->setPartnerLogo("gwenneg_logo");
-        $manager->persist($partner1);
+        $manager->persist($partner1); // annonce à doctrine qu'il faut enregistrer $partner1
 
         $partner2=new Partner();
         $partner2->setPartnerName('Crédit Agricole');
@@ -52,6 +52,6 @@ class PartnerFixtures extends Fixture
         $partner7->setPartnerLogo("daskemm_logo");
         $manager->persist($partner7);
 
-        $manager->flush();
+        $manager->flush(); // mise à jour de la bdd
     }
 }
