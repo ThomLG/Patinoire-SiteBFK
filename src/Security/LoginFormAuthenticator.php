@@ -70,7 +70,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
         $user = $this->entityManager->getRepository(User::class)->findOneBy(['email' => $credentials['email']]);
 
         if (!$user) {
-            // message d'erreur d'authentification-importance de ne pas préciser trop l'erreur
+            // message d'erreur d'authentification-important de ne pas préciser trop l'erreur
             throw new CustomUserMessageAuthenticationException('Email ou mot de passe incorrects !');
         }
 
@@ -97,6 +97,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
         }
 
         return new RedirectResponse($this->urlGenerator->generate('default'));
+        //redirection vers la page d'accueil qd l'authentification est réussie.
     }
 
     protected function getLoginUrl()

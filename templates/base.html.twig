@@ -14,6 +14,9 @@
         <header>
             <h1>Breizh Fobal Klub</h1>
             {% if app.user %} {# si l'user est connecté #}
+                <div class="mb-3">
+                    {{ app.user.lastName}} {{ app.user.firstName }}
+                </div>
                 <a class="dropdown-item" href="profile.html">
                     <i class="fa fa-user">
                     </i>
@@ -33,10 +36,9 @@
 
             {# Barre de navigation #}
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                {#<a class="navbar-brand" href="#">Navbar</a>#}
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> {# bouton hamburger #}
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
