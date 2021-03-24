@@ -11,11 +11,47 @@ body {
 }
 
 h1{
+    color: black;
     font-family: Poppins;
     text-align: center;
+    text-transform: uppercase;
+}
+
+//Custumisation menu navigation
+.menuBfk{
+    background-color: white;
+    display: flex;
+    color: black;
+    text-transform: uppercase;
 }
 
 
+//----------------------------Custumisation block partenaire--------------------------------------------------
+.partnerContainer{
+    background-color: black;
+    border-top: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+/*Adaptation du flex à la taille de l'écran*/
+@media (max-width: 800px){
+    .partnerContainer{
+        flex-direction: column; //à partir de 800px, les éléments partenaires sont alignés en colonne)
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.partnerContainer img{
+    width: 200px;
+    height: 120px;
+    object-fit: contain;
+}
+
+//Custumisation footer
 .footerContainer {
     background-color: black;
     color: white;

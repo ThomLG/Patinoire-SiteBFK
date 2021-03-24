@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Site officiel du Breizh Fobal Klub{% endblock %}
+
+{% block body %}
+
+
+
+<div class="partnerContainer">
+    {% for partner in partners %}
+    <li><img src="{{ asset('uploads/partners/' ~ partner.partnerLogo2) }}" alt="{{ partner.partnerName }}"></li>
+    {%  endfor %}
+</div>
+{% endblock %}

@@ -32,6 +32,11 @@ class Partner
      */
     private $partnerLogo;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $partnerLogo2;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Partner
     public function setPartnerLogo(?string $partnerLogo): self
     {
         $this->partnerLogo = $partnerLogo;
+
+        return $this;
+    }
+
+    public function getPartnerLogo2(): ?string
+    {
+        return $this->partnerLogo2;
+    }
+
+    public function setPartnerLogo2(?string $partnerLogo2): self
+    {
+        $this->partnerLogo2 = $partnerLogo2;
 
         return $this;
     }

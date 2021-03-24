@@ -10,13 +10,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends AbstractController
 {
     /**
-     * @Route("/", name="default")
+     * @Route("/", name="homepage")
      */
     public function index(PartnerRepository $partnerRepository): Response
     {
         //afficher la liste des partenaires
         $partners=$partnerRepository->findBy([],["partnerName"=>"ASC"]);
-        return $this->render('default/index.html.twig', [
+        return $this->render('default/homepage.html.twig', [
             'partners' => $partners,
         ]);
     }

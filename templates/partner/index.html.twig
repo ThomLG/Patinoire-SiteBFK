@@ -6,9 +6,11 @@
     <h1>Nos Partenaires</h1>
     {% for partner in partners %}
         <ul>
-        <img src="{{ asset('uploads/partners/' ~ partner.partnerLogo) }}" alt="{{ partner.partnerName }}">
-        {{ partner.partnerName }}
-        {{ partner.partnerDescription }}
+            <li>
+                <img src="{{ asset('uploads/partners/' ~ partner.partnerLogo) }}" alt="{{ partner.partnerName }}">
+                {{ partner.partnerName }}
+                {{ partner.partnerDescription }}
+            </li>
         </ul>
     {%  endfor %}
 {% endblock %}
