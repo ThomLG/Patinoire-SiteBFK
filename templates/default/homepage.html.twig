@@ -3,12 +3,23 @@
 {% block title %}Site officiel du Breizh Fobal Klub{% endblock %}
 
 {% block body %}
+<div class="nextMatch">Futur match date</div>
 
+<div class="homepageContent">Contenu page d'accueil
+    <section class="lastMatch">
+        BreizhFK-Adversaire 1-0
+    </section>
+    <section class="lastNews">
+        Dernières infos
+    </section>
+    <section class="calendrar">
+        Calendrier
+    </section>
+</div>
 
-
-<div class="partnerContainer">
+<section class="partnerContainer">
     {% for partner in partners %}
     <li><img src="{{ asset('uploads/partners/' ~ partner.partnerLogo2) }}" alt="{{ partner.partnerName }}"></li>
     {%  endfor %}
-</div>
+</section>
 {% endblock %}

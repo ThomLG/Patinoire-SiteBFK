@@ -9,6 +9,7 @@ body {
     min-height: 100vh;
 
 }
+/*---------------------------------------HEADER----------------------------------------------------------*/
 
 h1{
     color: black;
@@ -17,12 +18,25 @@ h1{
     text-transform: uppercase;
 }
 
-//Custumisation menu navigation
+//Custumisation menu navigation-------------------------------------------------------------------------------
 .menuBfk{
     background-color: white;
     display: flex;
     color: black;
     text-transform: uppercase;
+}
+/*---------------------------------------------CONTENU PRINCIPAL------------------------------------------------------*/
+
+//Custumisation div next match--------------------------------------------------------------------------------
+.nextMatch{
+    color:white;
+    background-color: black;
+    border:1px solid red;
+}
+
+//Mise en page contenu de la page d'accueil-----------------------------------------------------------------
+.homepageContent{
+    background-color: white;
 }
 
 
@@ -39,9 +53,10 @@ h1{
 /*Adaptation du flex à la taille de l'écran*/
 @media (max-width: 800px){
     .partnerContainer{
-        flex-direction: column; //à partir de 800px, les éléments partenaires sont alignés en colonne)
-        align-items: center;
-        justify-content: space-between;
+        flex-direction: row; //à partir de 800px, les éléments partenaires sont alignés en colonne)
+        flex-wrap: wrap;
+        align-items:center;
+        justify-content: space-around;
     }
 }
 
@@ -50,6 +65,16 @@ h1{
     height: 120px;
     object-fit: contain;
 }
+
+@media (max-width: 800px){
+    .partnerContainer img {
+        width: 160px;
+        height: 80px;
+        object-fit: contain;
+    }
+}
+
+/*---------------------------------------------FOOTER------------------------------------------------------*/
 
 //Custumisation footer
 .footerContainer {
