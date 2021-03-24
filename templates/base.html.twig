@@ -36,29 +36,67 @@
 
             {# Barre de navigation #}
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                {# bouton hamburger #}
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button> {# bouton hamburger #}
+                </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link active" href="#">Le Club</a>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Le Club
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Histoire du club</a>
+                                <a class="dropdown-item" href="#">Le Conseil d'Administration</a>
+                                <a class="dropdown-item" href="#">Infrastructures</a>
+                            </div>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link active" href="#">Equipes</a>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Equipes
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Staff Sportif</a>
+                                <a class="dropdown-item" href="#">Seniors</a>
+                                <a class="dropdown-item" href="#">Féminines</a>
+                                <a class="dropdown-item" href="#">Jeunes</a>
+                            </div>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link active" href="#">Compétitions</a>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Compétitions
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Résultats</a>
+                                <a class="dropdown-item" href="#">Calendrier</a>
+                            </div>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link active" href="{{ path('partner') }}">Partenaires</a>
+                        <li class="nav-item  dropdown active">
+                            <a class="nav-link dropdown" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Partenaires
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="nav-link active" href="{{ path('partner') }}"> Nos Partenaires</a>
+                            </div>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link active" href="#">Contacts</a>
+                        <li class="nav-item  dropdown active">
+                            <a class="nav-link dropdown" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Contacts
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="nav-link active" href="">Contacts</a>
+                            </div>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link active" href="#">Nous rejoindre</a>
+                        <li class="nav-item  dropdown active">
+                            <a class="nav-link dropdown" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Nous rejoindre
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="nav-link active" href="">Demande d'inscription</a>
+                            </div>
                         </li>
+
                     </ul>
                 </div>
             </nav>
