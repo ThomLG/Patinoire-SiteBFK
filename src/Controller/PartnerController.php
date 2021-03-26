@@ -16,7 +16,7 @@ class PartnerController extends AbstractController
     {
             //afficher la liste des partenaires
             $partners=$partnerRepository->findAll();
-        return $this->render('partner/index.html.twig', [
+            return $this->render('partner/index.html.twig', [
             'partners' => $partners,
         ]);
 

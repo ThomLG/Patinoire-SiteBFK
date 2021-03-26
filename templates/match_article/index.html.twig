@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Derniers matches | Site Officiel du Breizh Fobal Klub{% endblock %}
+
+{% block body %}
+
+    <h1>Titre match</h1>
+    {% for matcharticle in matcharticles %}
+        {{ matcharticle.articleTitle }}
+        {{ matcharticle.articleDescription }}
+    {% endfor %}
+
+{% endblock %}

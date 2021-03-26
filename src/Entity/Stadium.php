@@ -32,6 +32,11 @@ class Stadium
      */
     private $stadiumCity;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $stadium_photo;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Stadium
     public function setStadiumCity(string $stadiumCity): self
     {
         $this->stadiumCity = $stadiumCity;
+
+        return $this;
+    }
+
+    public function getStadiumPhoto(): ?string
+    {
+        return $this->stadium_photo;
+    }
+
+    public function setStadiumPhoto(?string $stadium_photo): self
+    {
+        $this->stadium_photo = $stadium_photo;
 
         return $this;
     }

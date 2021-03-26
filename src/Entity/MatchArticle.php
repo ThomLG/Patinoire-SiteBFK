@@ -32,6 +32,11 @@ class MatchArticle
      */
     private $date;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $mathPhoto;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class MatchArticle
     public function setDate(\DateTimeInterface $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getMathPhoto(): ?string
+    {
+        return $this->mathPhoto;
+    }
+
+    public function setMathPhoto(?string $mathPhoto): self
+    {
+        $this->mathPhoto = $mathPhoto;
 
         return $this;
     }

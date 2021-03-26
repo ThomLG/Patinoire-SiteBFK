@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les News | Site Officiel du Breizh Fobal Klub{% endblock %}
+
+{% block body %}
+
+    <h1>Les News</h1>
+    {% for novelty in novelties %}
+    <ul>
+        <li>{{novelty.noveltyTitle}}</li>
+    </ul>
+    {% endfor %}
+
+{% endblock %}

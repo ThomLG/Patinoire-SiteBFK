@@ -7,11 +7,21 @@
 
 <div class="homepageContent">Contenu page d'accueil
     <section class="lastMatch">
-        BreizhFK-Adversaire 1-0
+        {% for matcharticle in matcharticles %}
+            <img src="{{ asset('uploads/photo_matches/' ~ matcharticle.mathPhoto) }}" alt="{{ matcharticle.articleTitle }}">
+            <a href="{{ path('match_articles') }}">{{ matcharticle.articleTitle }}</a>
+        {% endfor %}
     </section>
+
     <section class="lastNews">
         Dernières infos
+        {% for novelty in novelties %}
+            <ul>
+                <li>{{novelty.noveltyTitle}}</li>
+            </ul>
+        {% endfor %}
     </section>
+
     <section class="calendrar">
         Calendrier
     </section>
