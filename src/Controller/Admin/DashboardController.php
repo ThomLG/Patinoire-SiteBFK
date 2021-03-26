@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\FootballMatch;
 use App\Entity\Novelty;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -31,5 +32,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Utilisateurs', 'icon class', User::class); //ajout des user dans le menu du dashboard easyadmin
         yield MenuItem::linkToCrud('News', 'icon class', Novelty::class); //ajout des user dans le menu du dashboard easyadmin
+        yield MenuItem::linkToCrud('Matches', 'icon class', FootballMatch::class); //ajout des user dans le menu du dashboard easyadmin
     }
 }
