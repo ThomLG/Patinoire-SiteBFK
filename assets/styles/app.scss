@@ -27,21 +27,38 @@ h1{
 }
 /*---------------------------------------------CONTENU PRINCIPAL------------------------------------------------------*/
 
-//Custumisation div next match--------------------------------------------------------------------------------
+/*---------------------------------------Mise en page contenu de la page d'accueil-----------------------------------*/
+
+
+//Custumisation div next match
+
 .nextMatch{
     color:white;
     background-color: black;
-    border:1px solid red;
+    border: 1px solid red;
+    margin: auto;
 }
 
-//Mise en page contenu de la page d'accueil-----------------------------------------------------------------
+
 .homepageContent{
     background-color: white;
 }
 
-//Mise en page contenu dernier match------------------------------------------------------------------------
+//Mise en page section dernier match------------------------------------------------------------------------
 .lastMatch{
     background-color: grey;
+}
+
+.lastMatchResult a {
+    background-color: #17a2b8;
+    color: white;
+    font-size: 22pt;
+}
+
+.lastMatchImage img{
+    height: 600px;
+    width: auto;
+    object-fit: contain;
 }
 
 //----------------------------Custumisation block partenaire--------------------------------------------------
@@ -54,28 +71,31 @@ h1{
     justify-content: space-between;
 }
 
+
+.partnerContainer img{//images des partenaires
+    width: 200px;
+    height: 120px;
+    object-fit: contain;
+}
+
 /*Adaptation du flex à la taille de l'écran*/
 @media (max-width: 800px){
     .partnerContainer{
-        flex-direction: row; //à partir de 800px, les éléments partenaires sont alignés en colonne)
+        flex: 1;
+        flex-direction: column; //à partir de 800px, les éléments partenaires sont alignés en colonne)
         flex-wrap: wrap;
         align-items:center;
         justify-content: space-around;
     }
 }
 
-.partnerContainer img{
-    width: 200px;
-    height: 120px;
-    object-fit: contain;
-}
-
-@media (max-width: 800px){
+@media(max-width: 800px){
     .partnerContainer img {
         width: 160px;
         height: 80px;
         object-fit: contain;
     }
+
 }
 
 /*---------------------------------------------FOOTER------------------------------------------------------*/

@@ -3,13 +3,18 @@
 {% block title %}Site officiel du Breizh Fobal Klub{% endblock %}
 
 {% block body %}
-<div class="nextMatch">Futur match date</div>
+<div class="homepageContent">
 
-<div class="homepageContent">Contenu page d'accueil
+    <div class="nextMatch">Futur match date</div>
+
     <section class="lastMatch">
         {% for matcharticle in matcharticles %}
-            <img src="{{ asset('uploads/photo_matches/' ~ matcharticle.mathPhoto) }}" alt="{{ matcharticle.articleTitle }}">
-            <a href="{{ path('match_articles') }}">{{ matcharticle.articleTitle }}</a>
+            <div class="lastMatchImage">
+                <img src="{{ asset('uploads/photo_matches/' ~ matcharticle.mathPhoto) }}" alt="{{ matcharticle.articleTitle }}">
+            </div>
+            <div class="lastMatchResult">
+                <a href="{{ path('match_articles') }}">{{ matcharticle.articleTitle }}</a>
+            </div>
         {% endfor %}
     </section>
 
@@ -25,11 +30,12 @@
     <section class="calendrar">
         Calendrier
     </section>
-</div>
+
 
 <section class="partnerContainer">
     {% for partner in partners %}
     <li><img src="{{ asset('uploads/partners/' ~ partner.partnerLogo2) }}" alt="{{ partner.partnerName }}"></li>
     {%  endfor %}
 </section>
+</div>
 {% endblock %}

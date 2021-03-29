@@ -55,4 +55,9 @@ class BfkTeam
 
         return $this;
     }
+
+    public function __toString():string //permet de renvoyer le nom des équipes (exemple easy admin en faisant une association field)
+    {
+        return $this->getBfkTeamName();
+    }
 }

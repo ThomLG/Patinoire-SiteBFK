@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Résultats | Site Officiel du Breizh Fobal Klub{% endblock %}
+
+{% block body %}
+
+    <h1>Résultats</h1>
+
+    <ul>
+    {% for result in results %}
+      <li> {{ result.result }}</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}

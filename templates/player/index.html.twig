@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+    <h1>Joueurs</h1>
+
+                Tous les joueurs
+    <ul>
+            {% for player in players %}
+                <li>{{ player.LastName }}</li>
+            {% endfor %}
+    </ul>
+
+            Seniors:
+    <ul>
+        {% for seniorplayer in seniorsplayers %}
+        <li>{{ seniorplayer.LastName }}, {{ seniorplayer.Category.categoryName }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
