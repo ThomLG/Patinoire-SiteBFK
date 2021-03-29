@@ -1,108 +1,155 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~font-awesome/scss/font-awesome";
 
-body {
-    background-color: white;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    margin:0;
-    min-height: 100vh;
+//Développé en Mobile first
 
-}
-/*---------------------------------------HEADER----------------------------------------------------------*/
 
-h1{
-    color: black;
-    font-family: Poppins;
-    text-align: center;
-    text-transform: uppercase;
+//------------------------------------------Mise en page du Header---------------------------------------------
+body{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-//Custumisation menu navigation-------------------------------------------------------------------------------
-.menuBfk{
-    background-color: white;
-    display: flex;
-    color: black;
-    text-transform: uppercase;
-}
-/*---------------------------------------------CONTENU PRINCIPAL------------------------------------------------------*/
-
-/*---------------------------------------Mise en page contenu de la page d'accueil-----------------------------------*/
-
-
-//Custumisation div next match
-
-.nextMatch{
-    color:white;
-    background-color: black;
-    border: 1px solid red;
-    margin: auto;
+.main{
+  flex: 1;
 }
 
-
-.homepageContent{
-    background-color: white;
+.siteTitle{
+  color: black;
+  font-size: 20pt;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-//Mise en page section dernier match------------------------------------------------------------------------
-.lastMatch{
-    background-color: grey;
+.bfkNavbar{
+  background-color:mediumaquamarine;
+  width: 100%;
 }
 
-.lastMatchResult a {
-    background-color: #17a2b8;
-    color: white;
-    font-size: 22pt;
+.bfkNavbar a{
+  color: black !important;
+  font-family: Poppins;
+  text-transform: uppercase;
 }
 
-.lastMatchImage img{
-    height: 600px;
-    width: auto;
-    object-fit: contain;
+.bfkNavbar a:hover{
+  background-color: #0000cc;
 }
 
-//----------------------------Custumisation block partenaire--------------------------------------------------
-.partnerContainer{
-    background-color: black;
-    border-top: 1px solid red;
+.dropdown-menu{
+  background-color: purple;
+
+}
+
+
+
+//------------------------------------Mise en page de la page d'accueil------------------------------------------------
+.content{
+  background-color: #00bb00;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+.container a {
+  background-color: #17a2b8;
+  color: white;
+  font-size: 16pt;
+}
+
+.container img{
+  margin:2px;
+  height:auto;
+  width: 250px;
+}
+
+.sidebar{
+  background-color: yellow;
+  width: 100%;
+}
+
+
+
+
+.partnerContent{
+  background-color: black;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items:center ;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+
+.partnerContent img{
+  height: 120px;
+  width: 200px;
+  padding: 10px;
+  object-fit:contain
+}
+
+.footerContainer{
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+//------------------------ à partir de 720 px et plus, il passe en flex-direction row----------------------------
+@media screen and (min-width: 720px){
+  .header h1{
+    font-size: 35pt;
+  }
+
+                            //Mise en forme menu
+  .bfkNavbar .bfkNavbarContent{
     display: flex;
     flex-direction: row;
-    list-style-type: none;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .bfkNavbar a{
+    font-size: 16pt;
+  }
+  .dropdown{
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-menu{
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+  .dropdown:hover .dropdown-menu{
+    display: block;
+  }
+//-------------------------------------------------------------------------------------------------------------
+
+  .content{
+    background-color: #00bb00;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .sidebar{
+    background-color: yellow;
+    width: 30vw; // Prendra 30% de la largeur de l'écran
+  }
+
+  .partnerContent{
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .footerContainer{
+    width: 100%;
+  }
 }
 
-
-.partnerContainer img{//images des partenaires
-    width: 200px;
-    height: 120px;
-    object-fit: contain;
-}
-
-/*Adaptation du flex à la taille de l'écran*/
-@media (max-width: 800px){
-    .partnerContainer{
-        flex: 1;
-        flex-direction: column; //à partir de 800px, les éléments partenaires sont alignés en colonne)
-        flex-wrap: wrap;
-        align-items:center;
-        justify-content: space-around;
-    }
-}
-
-@media(max-width: 800px){
-    .partnerContainer img {
-        width: 160px;
-        height: 80px;
-        object-fit: contain;
-    }
-
-}
-
-/*---------------------------------------------FOOTER------------------------------------------------------*/
-
-//Custumisation footer
-.footerContainer {
-    background-color: black;
-    color: white;
-    text-align: center;
-}

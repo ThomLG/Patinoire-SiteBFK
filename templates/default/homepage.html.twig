@@ -2,40 +2,49 @@
 
 {% block title %}Site officiel du Breizh Fobal Klub{% endblock %}
 
-{% block body %}
-<div class="homepageContent">
+{% block content %}
 
-    <div class="nextMatch">Futur match date</div>
+    <div class="main">
 
-    <section class="lastMatch">
-        {% for matcharticle in matcharticles %}
-            <div class="lastMatchImage">
-                <img src="{{ asset('uploads/photo_matches/' ~ matcharticle.mathPhoto) }}" alt="{{ matcharticle.articleTitle }}">
+        <div class="content">
+            <div class="container">
+                <div class="nextMatch">Futur match date</div>
+                <section>
+                    {% for matcharticle in matcharticles %}
+                        <div>
+                            <img src="{{ asset('uploads/photo_matches/' ~ matcharticle.mathPhoto) }}"
+                                 alt="{{ matcharticle.articleTitle }}">
+                        </div>
+                        <div>
+                            <a href="{{ path('match_articles') }}">{{ matcharticle.articleTitle }}</a>
+                        </div>
+                    {% endfor %}
+                </section>
             </div>
-            <div class="lastMatchResult">
-                <a href="{{ path('match_articles') }}">{{ matcharticle.articleTitle }}</a>
+            <div class="sidebar">
+                <div class="container">
+                    <section>
+                        Dernières infos
+                        {% for novelty in novelties %}
+                            <ul>
+                                <li>{{ novelty.noveltyTitle }}</li>
+                            </ul>
+                        {% endfor %}
+                    </section>
+
+                    <section>
+                        Calendrier
+                    </section>
+                </div>
             </div>
+        </div>
+    </div>
+
+
+    <div class="partnerContent">
+        {% for partner in partners %}
+            <li><img src="{{ asset('uploads/partners/' ~ partner.partnerLogo2) }}" alt="{{ partner.partnerName }}"></li>
         {% endfor %}
-    </section>
+    </div>
 
-    <section class="lastNews">
-        Dernières infos
-        {% for novelty in novelties %}
-            <ul>
-                <li>{{novelty.noveltyTitle}}</li>
-            </ul>
-        {% endfor %}
-    </section>
-
-    <section class="calendrar">
-        Calendrier
-    </section>
-
-
-<section class="partnerContainer">
-    {% for partner in partners %}
-    <li><img src="{{ asset('uploads/partners/' ~ partner.partnerLogo2) }}" alt="{{ partner.partnerName }}"></li>
-    {%  endfor %}
-</section>
-</div>
 {% endblock %}
