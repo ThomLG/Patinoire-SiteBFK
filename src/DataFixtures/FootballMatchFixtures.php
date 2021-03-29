@@ -10,6 +10,7 @@ class FootballMatchFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
+        //on fait le lien avec les clés étrangères
         $bfkTeam=$this->getReference('bfkTeam1');
         $opponent=$this->getReference('opponent1');
 

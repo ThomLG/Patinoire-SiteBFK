@@ -5,9 +5,11 @@
 {% block body %}
 
     <h1>Résultats</h1>
-    {% for result in results %}
+
     <ul>
+    {% for result in results %}
       <li> {{ result.result }}</li>
-    </ul>
     {% endfor %}
+    </ul>
+
 {% endblock %}

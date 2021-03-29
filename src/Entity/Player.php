@@ -52,6 +52,18 @@ class Player
      */
     private $nbAssits;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $playerPhoto;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class)
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $category;
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -137,6 +149,31 @@ class Player
     public function setNbAssits(string $nbAssits): self
     {
         $this->nbAssits = $nbAssits;
+
+        return $this;
+    }
+
+    public function getPlayerPhoto(): ?string
+    {
+        return $this->playerPhoto;
+    }
+
+    public function setPlayerPhoto(?string $playerPhoto): self
+    {
+        $this->playerPhoto = $playerPhoto;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }

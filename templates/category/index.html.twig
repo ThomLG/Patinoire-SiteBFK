@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% for category in categories %} {{category.categoryName}}{% endfor %}{% endblock %}
+
+{% block body %}
+{% for player in players %}
+    {{  player.lastName}}
+    {% endfor %}
+{% endblock %}
