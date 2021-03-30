@@ -5,16 +5,13 @@
 {% block content %}
 
     <div class="main">
-
         <div class="content">
             <div class="container">
                 <div class="nextMatch">Futur match date</div>
-                <section>
+                <section class="lastMatch">
                     {% for matcharticle in matcharticles %}
-                        <div>
-                            <img src="{{ asset('uploads/photo_matches/' ~ matcharticle.mathPhoto) }}"
+                        <img src="{{ asset('uploads/photo_matches/' ~ matcharticle.mathPhoto) }}"
                                  alt="{{ matcharticle.articleTitle }}">
-                        </div>
                         <div>
                             <a href="{{ path('match_articles') }}">{{ matcharticle.articleTitle }}</a>
                         </div>
@@ -23,8 +20,8 @@
             </div>
             <div class="sidebar">
                 <div class="container">
-                    <section>
-                        Dernières infos
+                    <section class="lastNews">
+                        <h3>Dernières infos</h3>
                         {% for novelty in novelties %}
                             <ul>
                                 <li>{{ novelty.noveltyTitle }}</li>
@@ -32,8 +29,9 @@
                         {% endfor %}
                     </section>
 
-                    <section>
-                        Calendrier
+                    <section class="team-rank">
+                        <h3>Classement</h3>
+                        <p>En construction</p>
                     </section>
                 </div>
             </div>
