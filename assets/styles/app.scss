@@ -20,7 +20,9 @@ body{
 
 .siteTitle{
   color: black;
-  font-size: 20pt;
+  font-family:"Rambla";
+  font-size: 25pt;
+  font-weight: bold;
   text-align: center;
   text-transform: uppercase;
 }
@@ -77,9 +79,32 @@ body{
   width: 100%;
 }
 
+
 .lastMatch img{
-  max-height:100%;
+    border: solid red 1px;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.stadiums {
+  background-color: #0f6674;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px;
+}
+.stadiumContainer{
+  background-color: #0b2e13;
+  color: white;
+  margin: 5px;
+}
+
+.stadiumContainer img{
+  border: solid red 1px;
+  max-height: 100%;
   max-width: 100%;
+
+
 }
 
 .sidebar{
@@ -225,6 +250,22 @@ body{
     background-color: white;
     border: solid red 2px;
     margin: 10px;
+  }
+  .stadiums{
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+  .stadiumContainer{
+    background-color: red;
+    color: white;
+    margin: 10px;
+  }
+
+  .stadiumContainer img{
+    max-height: 450px;
+    max-width: 600px;
+    object-fit: contain;
   }
 
   .partnerContent{

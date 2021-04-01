@@ -13,24 +13,24 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends AbstractController
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="homepage", methods={"GET|POST"})
      */
     public function index(PartnerRepository $partnerRepository, NoveltyRepository $noveltyRepository, MatchArticleRepository $matchArticleRepository): Response
     {
         //afficher le dernier match par ordre chronologique décroissant
         $matcharticles=$matchArticleRepository->findBy([],["date"=>"DESC"], 1); // on filtre par date décroissante
 
+        //afficher la liste des nouveautés
         $novelties=$noveltyRepository->findBy([], ['noveltyDate'=>"DESC"],5);// on filtre par date décroisssante les novelties et on les limite à 5
 
         //afficher la liste des partenaires
         $partners=$partnerRepository->findBy([],["partnerName"=>"ASC"]);
 
-        return $this->render('default/homepage.html.twig', [
+        return $this->render('default/index.html.twig', [
             'matcharticles'=>$matcharticles,
             'partners' => $partners,
             'novelties'=>$novelties
         ]);
     }
-
 }
 

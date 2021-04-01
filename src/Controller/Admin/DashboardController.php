@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\FootballMatch;
 use App\Entity\Novelty;
+use App\Entity\Stadium;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -30,8 +31,9 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
-        yield MenuItem::linkToCrud('Utilisateurs', 'icon class', User::class); //ajout des user dans le menu du dashboard easyadmin
-        yield MenuItem::linkToCrud('News', 'icon class', Novelty::class); //ajout des user dans le menu du dashboard easyadmin
-        yield MenuItem::linkToCrud('Matches', 'icon class', FootballMatch::class); //ajout des user dans le menu du dashboard easyadmin
+        yield MenuItem::linkToCrud('Utilisateurs', 'icon class', User::class); //ajout gestion des user dans le menu du dashboard easyadmin
+        yield MenuItem::linkToCrud('News', 'icon class', Novelty::class); //ajout gestion des news dans le menu du dashboard easyadmin
+        yield MenuItem::linkToCrud('Matches', 'icon class', FootballMatch::class); //ajout des matches dans le menu du dashboard easyadmin
+        yield MenuItem::linkToCrud('Infrastructures', 'icon class', Stadium::class); //ajout des stades dans le menu du dashboard easyadmin
     }
 }

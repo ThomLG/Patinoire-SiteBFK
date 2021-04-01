@@ -108,10 +108,14 @@
         </div>
     </nav>
 </header>
-
-
 {% block content %}
 {% endblock %}
+
+<div class="partnerContent">
+    {% for partner in partners %}
+        <li><img src="{{ asset('uploads/partners/' ~ partner.partnerLogo2) }}" alt="{{ partner.partnerName }}"></li>
+    {% endfor %}
+</div>
 
 <footer class="footerContainer">
     Mentions légales

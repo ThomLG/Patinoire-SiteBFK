@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\PartnerRepository;
 use App\Repository\StadiumRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -12,11 +13,13 @@ class StadiumController extends AbstractController
     /**
      * @Route("/infrastructures", name="infrastructures")
      */
-    public function index(StadiumRepository $stadiumRepository): Response
+    public function index(StadiumRepository $stadiumRepository, PartnerRepository $partnerRepository): Response
     {
         $stadiums=$stadiumRepository->findAll();
+        $partners=$partnerRepository->findAll();
         return $this->render('stadium/index.html.twig', [
             'stadiums' => $stadiums,
+            'partners'=>$partners
         ]);
     }
 }

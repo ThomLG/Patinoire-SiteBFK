@@ -2,7 +2,8 @@
 
 {% block title %}Partenaires | Site Officiel du Breizh Fobal Klub{% endblock %}
 
-{% block body %}
+{% block content %}
+<div class="main">
     <h1>Nos Partenaires</h1>
     {% for partner in partners %}
         <ul>
@@ -13,4 +14,6 @@
             </li>
         </ul>
     {%  endfor %}
+</div>
 {% endblock %}
+
