@@ -1,21 +1,23 @@
 {% extends 'base.html.twig' %}
-
-
 {% block title %}Infrastructures | Site Officiel du Breizh Fobal Klub{% endblock %}
 
 {% block content %}
-<div class="main">
-    <h1>Les Infrastructures du Club</h1>
-
-<section class="stadiums">
-    {% for stadium in stadiums %}
-        <div class="stadiumContainer">
-            {{ stadium.stadiumName }}
-            {{ stadium.stadiumAdress }}
-            {{ stadium.stadiumCity }}
-            <img src="{{ asset('uploads/infrastructures/' ~ stadium.stadiumPhoto) }}" alt="{{stadium.stadiumName}}">
+    <div class="main">
+        <h1 class="titlePage">Les Infrastructures du Club</h1>
+        <div class="stadiumContent">
+            {% for stadium in stadiums %}
+            <div class="d-flex">
+            <section class="stadiumCard card">
+                        <img class="card-img-top" src="{{ asset('uploads/infrastructures/' ~ stadium.stadiumPhoto) }}"
+                             alt="{{ stadium.stadiumName }}">
+                <div class="card-body">
+                    <h3 class="card-title">{{ stadium.stadiumName }}</h3>
+                    <p class="card-text"> Adresse : {{ stadium.stadiumAdress }}</p>
+                    <p class="card-text">{{ stadium.stadiumCity }}</p>
+                </div>
+            </section>
+            </div>
+            {% endfor %}
         </div>
-    {% endfor %}
-</section>
-</div>
+    </div>
 {% endblock %}

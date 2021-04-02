@@ -1,23 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% endblock %}
+{% block title %}{{category.categoryName}} | Site Officiel du Breizh Fobal Klub{% endblock %}
 
-{% block body %}
-
+{% block content %}
+<div class="main">
     <h1>Joueurs</h1>
 
-                Tous les joueurs
     <ul>
             {% for player in players %}
                 <li>{{ player.LastName }}</li>
             {% endfor %}
     </ul>
 
-            Seniors:
-    <ul>
-        {% for seniorplayer in seniorsplayers %}
-        <li>{{ seniorplayer.LastName }}</li>
-        {% endfor %}
-    </ul>
-
+</div>
 {% endblock %}

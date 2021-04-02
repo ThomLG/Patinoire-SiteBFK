@@ -3,7 +3,7 @@
 
 //Développé en Mobile first
 
-body{
+body {
   background-color: #0055aa;
   margin: 0;
   display: flex;
@@ -11,64 +11,66 @@ body{
   min-height: 100vh;
 }
 
-.main{
+.main {
   flex: 1;
   background-color: yellowgreen;
   width: 100%;
 }
+
 //------------------------------------------Mise en page du Header---------------------------------------------
 
-.siteTitle{
+.siteTitle {
   color: black;
-  font-family:"Rambla";
+  font-family: "Rambla";
   font-size: 25pt;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
 }
 
-.bfkNavbar{
-  background-color:mediumaquamarine;
+.bfkNavbar {
+  background-color: mediumaquamarine;
   width: 100%;
 }
 
-.bfkNavbar a{
+.bfkNavbar a {
   color: black !important;
   font-family: Poppins;
   text-transform: uppercase;
 }
 
-.bfkNavbar a:hover{
+.bfkNavbar a:hover {
   background-color: #0000cc;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   background-color: purple;
 
 }
 
 //------------------------------------Mise en page de la page d'accueil------------------------------------------------
-.content{
+.content {
   background-color: #00bb00;
   display: flex;
+  flex: 1;
   flex-direction: column;
   margin-bottom: 0;
   width: 100%;
 }
 
-.nextMatch{
+.nextMatch {
   background-color: black;
   border: solid red 2px;
   color: white;
   margin: 5px;
 }
 
-.lastMatch{
+.lastMatch {
   margin: 5px;
   position: relative;
 }
 
-.lastMatch a{
+.lastMatch a {
   color: white;
   background: rgba(0, 0, 0, 0.5);
   font-family: Poppins;
@@ -80,86 +82,84 @@ body{
 }
 
 
-.lastMatch img{
-    border: solid red 1px;
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.stadiums {
-  background-color: #0f6674;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 5px;
-}
-.stadiumContainer{
-  background-color: #0b2e13;
-  color: white;
-  margin: 5px;
-}
-
-.stadiumContainer img{
+.lastMatch img {
   border: solid red 1px;
   max-height: 100%;
   max-width: 100%;
-
-
+  object-fit: contain;
 }
 
-.sidebar{
+
+.sidebar {
   background-color: orange;
   width: 100%;
 }
 
-.sidebar h3{
+.sidebar h3 {
   background-color: black;
   color: white;
   font-size: 16pt;
   text-align: center;
 }
 
-.sidebar .container{
+.sidebar .container {
   background-color: yellow;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.lastNews{
+.lastNews {
   background-color: white;
   border: solid red 2px;
   margin: 5px;
 }
 
-.team-rank{
+.team-rank {
   background-color: white;
   border: solid red 2px;
   margin: 5px;
 }
 
-.partnerContent{
+//------------------------------------------Mise en page infrastructures------------------------------
+.stadiumContent {
+  background-color: #00bb00;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-bottom: 0;
+  padding: 5px;
+  width: 100%;
+}
+
+.stadiumCard {
+  margin: 4px auto;
+  width: 18rem;
+}
+
+//----------------------------Mise en page partenaires--------------------------------------------------
+.partnerContent {
   background-color: black;
-  border-top: solid red 1px ;
+  border-top: solid red 1px;
   list-style-type: none;
   width: 100%;
   display: flex;
   flex-direction: column;
   flex: 1;
-  align-items:center ;
+  align-items: center;
   justify-content: space-evenly;
 }
 
-.partnerContent img{
+.partnerContent img {
   height: 120px;
   width: 200px;
   padding: 10px;
-  object-fit:contain
+  object-fit: contain
 }
 
 //--------------------------------------------FOOTER---------------------------------------------------------
 
-.footerContainer{
+.footerContainer {
   background-color: black;
   color: white;
   text-align: center;
@@ -167,56 +167,67 @@ body{
 }
 
 
+//-------------------------Mise en page des titres des pages-------------------------------------------------------
+
+
+.titlePage{
+  font-size: 18pt;
+  text-align: center;
+}
+.stadiumSection h3{
+  font-size: 14pt;
+}
+
 //------------------------ à partir de 720 px et plus, il passe en flex-direction row----------------------------
-@media screen and (min-width: 720px){
-  .header h1{
+@media screen and (min-width: 720px) {
+  .header h1 {
     font-size: 35pt;
   }
 
-                            //Mise en forme menu
-  .bfkNavbar .bfkNavbarContent{
+  //Mise en forme menu
+  .bfkNavbar .bfkNavbarContent {
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
   }
-  .bfkNavbar a{
+  .bfkNavbar a {
     font-size: 16pt;
   }
-  .dropdown{
+  .dropdown {
     position: relative;
     display: inline-block;
   }
 
-  .dropdown-menu{
+  .dropdown-menu {
     display: none;
     position: absolute;
     z-index: 1;
   }
-  .dropdown:hover .dropdown-menu{
+  .dropdown:hover .dropdown-menu {
     display: block;
   }
-//-------------------------------------------------------------------------------------------------------------
+  //-------------------------------------------------------------------------------------------------------------
 
-  .content{
+  .content {
     background-color: #00bb00;
     flex-direction: row;
     width: 100%;
   }
-  .nextMatch{
+  .nextMatch {
     background-color: black;
     border: solid red 2px;
     color: white;
     margin: 10px;
   }
 
-  .lastMatch{
+  .lastMatch {
     margin: 10px;
     position: relative;
   }
 
-  .lastMatch a{
+  .lastMatch a {
     color: white;
     background: rgba(0, 0, 0, 0.5);
     font-family: Poppins;
@@ -227,61 +238,69 @@ body{
     width: 100%;
   }
 
-  .lastMatch img{
-    max-height:100%;
+  .lastMatch img {
+    max-height: 100%;
     max-width: 100%;
   }
 
-  .sidebar{
+  .sidebar {
     width: 35vw; // Prendra 30% de la largeur de l'écran
   }
 
-  .sidebar h3{
+  .sidebar h3 {
     font-size: 16pt;
   }
 
-  .lastNews{
+  .lastNews {
     background-color: white;
     border: solid red 2px;
     margin: 10px;
   }
 
-  .team-rank{
+  .team-rank {
     background-color: white;
     border: solid red 2px;
     margin: 10px;
   }
-  .stadiums{
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 10px;
-  }
-  .stadiumContainer{
-    background-color: red;
-    color: white;
-    margin: 10px;
-  }
-
-  .stadiumContainer img{
-    max-height: 450px;
-    max-width: 600px;
-    object-fit: contain;
-  }
-
-  .partnerContent{
+//---------------------------------Mise en page partenaires---------------------------------------------
+  .partnerContent {
     flex-direction: row;
     width: 100%;
   }
 
-  .partnerContent img{
+  .partnerContent img {
     height: 120px;
     width: 200px;
     object-fit: contain;
     padding: 10px;
   }
 
-  .footerContainer{
+//------------------------------------------Mise en page infrastructures------------------------------
+  .stadiumContent {
+    background-color: #00bb00;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 5px;
     width: 100%;
   }
+
+  .stadiumCard {
+    margin: 4px;
+    width: 26rem;
+}
+  .card-img-top {
+  }
+//-------------------------Mise en page des titres des pages-------------------------------------------------------
+
+
+
+//-----------------------------------------------------------------------------------------------------
+  .footerContainer {
+    width: 100%;
+  }
+
+
 }
 
