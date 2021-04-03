@@ -5,19 +5,17 @@
     <div class="main">
         <h1 class="titlePage">Les Infrastructures du Club</h1>
         <div class="stadiumContent">
-            {% for stadium in stadiums %}
-            <div class="d-flex">
-            <section class="stadiumCard card">
+                {% for stadium in stadiums %}
+                    <section class="stadiumCard card">
                         <img class="card-img-top" src="{{ asset('uploads/infrastructures/' ~ stadium.stadiumPhoto) }}"
                              alt="{{ stadium.stadiumName }}">
-                <div class="card-body">
-                    <h3 class="card-title">{{ stadium.stadiumName }}</h3>
-                    <p class="card-text"> Adresse : {{ stadium.stadiumAdress }}</p>
-                    <p class="card-text">{{ stadium.stadiumCity }}</p>
-                </div>
-            </section>
-            </div>
-            {% endfor %}
+                        <div class="card-body">
+                            <h3 class="card-title">{{ stadium.stadiumName }}</h3>
+                            <p class="card-text"> Adresse : {{ stadium.stadiumAdress }}</p>
+                            <p class="card-text">{{ stadium.stadiumCity }}</p>
+                        </div>
+                    </section>
+                {% endfor %}
         </div>
     </div>
 {% endblock %}

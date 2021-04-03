@@ -38,4 +38,9 @@ class Category
 
         return $this;
     }
+
+    public function __toString():string //permet de renvoyer le nom de la catégorie (exemple easy admin en faisant une association field)
+    {
+        return $this->getCategoryName();
+    }
 }

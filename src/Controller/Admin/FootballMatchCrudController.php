@@ -23,9 +23,9 @@ class FootballMatchCrudController extends AbstractCrudController
         return [
             TextField::new('footballMatchlocation', 'Lieu du match'),// ajout le champ lieu du match
             DateTimeField::new('footballMatchDate','Date du match'),// ajout du champ date
+            AssociationField::new('BfkTeam', 'Equipe du BFK'),
+            AssociationField::new('BfkTeamOpponent', 'Equipe adverse'),
             TextField::new('result','Résultat'),//ajout du champ résultat
-            AssociationField::new('BfkTeam'),
-            AssociationField::new('BfkTeamOpponent'),
         ];
     }
 }
