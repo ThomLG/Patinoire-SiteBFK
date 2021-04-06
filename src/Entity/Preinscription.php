@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\PreinscriptionRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=PreinscriptionRepository::class)
@@ -34,11 +35,13 @@ class Preinscription
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email(message="Veuillez entrer une adresse e-mail valide")
      */
     private $preInscriptionEmail;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=10)
+     * @Assert\Regex(pattern="/[0-9]{10}/", message="Veuillez entrer un numéro de téléphone valide")
      */
     private $preInscriptionPhoneNumber;
 
