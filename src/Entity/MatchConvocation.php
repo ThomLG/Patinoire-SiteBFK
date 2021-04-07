@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\MatchConvocationRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -18,30 +20,23 @@ class MatchConvocation
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Player::class)
+     * @ORM\ManyToOne(targetEntity=FootballMatch::class, inversedBy="matchConvocations")
+     */
+    private $matchConvocation;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Player::class, inversedBy="matchConvocations")
      */
     private $playerConvocation;
 
-    /**
-     * @ORM\OneToOne(targetEntity=FootballMatch::class, cascade={"persist", "remove"})
-     */
-    private $matchConvocation;
+    public function __construct()
+    {
+        $this->playerConvocation = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getPlayerConvocation(): ?Player
-    {
-        return $this->playerConvocation;
-    }
-
-    public function setPlayerConvocation(?Player $playerConvocation): self
-    {
-        $this->playerConvocation = $playerConvocation;
-
-        return $this;
     }
 
     public function getMatchConvocation(): ?FootballMatch
@@ -52,6 +47,30 @@ class MatchConvocation
     public function setMatchConvocation(?FootballMatch $matchConvocation): self
     {
         $this->matchConvocation = $matchConvocation;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Player[]
+     */
+    public function getPlayerConvocation(): Collection
+    {
+        return $this->playerConvocation;
+    }
+
+    public function addPlayerConvocation(Player $playerConvocation): self
+    {
+        if (!$this->playerConvocation->contains($playerConvocation)) {
+            $this->playerConvocation[] = $playerConvocation;
+        }
+
+        return $this;
+    }
+
+    public function removePlayerConvocation(Player $playerConvocation): self
+    {
+        $this->playerConvocation->removeElement($playerConvocation);
 
         return $this;
     }

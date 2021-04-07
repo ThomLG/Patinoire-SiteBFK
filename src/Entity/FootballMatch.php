@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\FootballMatchRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -41,6 +43,17 @@ class FootballMatch
      * @ORM\ManyToOne(targetEntity=BfkTeamOpponent::class)
      */
     private $BfkTeamOpponent;
+
+    /**
+     * @ORM\OneToMany(targetEntity=MatchConvocation::class, mappedBy="matchConvocation")
+     */
+    private $matchConvocations;
+
+
+    public function __construct()
+    {
+        $this->matchConvocations = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -103,6 +116,41 @@ class FootballMatch
     public function setBfkTeamOpponent(?BfkTeamOpponent $BfkTeamOpponent): self
     {
         $this->BfkTeamOpponent = $BfkTeamOpponent;
+
+        return $this;
+    }
+
+    public function __toString():string
+    {
+        return $this->getId();
+    }
+
+    /**
+     * @return Collection|MatchConvocation[]
+     */
+    public function getMatchConvocations(): Collection
+    {
+        return $this->matchConvocations;
+    }
+
+    public function addMatchConvocation(MatchConvocation $matchConvocation): self
+    {
+        if (!$this->matchConvocations->contains($matchConvocation)) {
+            $this->matchConvocations[] = $matchConvocation;
+            $matchConvocation->setMatchConvocation($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMatchConvocation(MatchConvocation $matchConvocation): self
+    {
+        if ($this->matchConvocations->removeElement($matchConvocation)) {
+            // set the owning side to null (unless already changed)
+            if ($matchConvocation->getMatchConvocation() === $this) {
+                $matchConvocation->setMatchConvocation(null);
+            }
+        }
 
         return $this;
     }

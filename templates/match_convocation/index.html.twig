@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Partenaires | Site Officiel du Breizh Fobal Klub{% endblock %}
+
+{% block content %}
+
+<div class="main">
+    <div class="content">
+        {% if app.user %} {# si l'user est connecté #}
+        {{form(matchConvocationForm)}}
+        {% endif %}
+    </div>
+
+</div>
+{% endblock %}

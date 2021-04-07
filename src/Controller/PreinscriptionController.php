@@ -25,14 +25,14 @@ class PreinscriptionController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) { // vérifie les données du formulaire et si elles sont valides
             $preinscription = $form->getData(); //récupérer les données du formulaire et les mettre dans l'objet $comment
-            //enreigsrtement en bdd
+            //enregistrement en bdd
             $em = $this->getDoctrine()->getManager();
             $em->persist($preinscription);
             $em->flush();
         }
         return $this->render('preinscription/index.html.twig', [
-                'preinscriptionForm' => $form->createView(),
-                'partners' => $partners
-            ]);
+            'preinscriptionForm' => $form->createView(),
+            'partners' => $partners
+        ]);
         }
 }

@@ -23,7 +23,7 @@ class PlayerCrudController extends AbstractCrudController
             TextField::new('lastName', 'Nom',),
             TextField::new('firstName','Prénom'),
             TextField::new('position','Position'),
-            DateField::new('dateOfBirth','Date de naissance')->renderAsText(),
+            DateField::new('dateOfBirth','Date de naissance')->renderAsNativeWidget(),
             TextField::new('nbMatches','Nombre de matches'),
             TextField::new('nbGoals','Nombre de buts'),
             TextField::new('nbAssits','Nombre de passes décisives'),

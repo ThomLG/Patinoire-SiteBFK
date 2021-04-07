@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\PlayerRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -62,6 +64,17 @@ class Player
      * @ORM\JoinColumn(nullable=false)
      */
     private $category;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=MatchConvocation::class, mappedBy="playerConvocation")
+     */
+    private $matchConvocations;
+
+
+    public function __construct()
+    {
+        $this->matchConvocations = new ArrayCollection();
+    }
 
 
     public function getId(): ?int
@@ -177,4 +190,37 @@ class Player
 
         return $this;
     }
+
+    public function __toString():string
+    {
+        return $this->getLastName();
+    }
+
+    /**
+     * @return Collection|MatchConvocation[]
+     */
+    public function getMatchConvocations(): Collection
+    {
+        return $this->matchConvocations;
+    }
+
+    public function addMatchConvocation(MatchConvocation $matchConvocation): self
+    {
+        if (!$this->matchConvocations->contains($matchConvocation)) {
+            $this->matchConvocations[] = $matchConvocation;
+            $matchConvocation->addPlayerConvocation($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMatchConvocation(MatchConvocation $matchConvocation): self
+    {
+        if ($this->matchConvocations->removeElement($matchConvocation)) {
+            $matchConvocation->removePlayerConvocation($this);
+        }
+
+        return $this;
+    }
+
 }
