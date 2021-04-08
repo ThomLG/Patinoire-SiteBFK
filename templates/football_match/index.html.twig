@@ -2,14 +2,16 @@
 
 {% block title %}Résultats | Site Officiel du Breizh Fobal Klub{% endblock %}
 
-{% block body %}
-
-    <h1>Résultats</h1>
-
+{% block content %}
+    <div class="main">
+        <h1>Résultats</h1>
+    <div class="content">
     <ul>
     {% for result in results %}
-      <li> {{ result.result }}</li>
+        {{ result.result }}
     {% endfor %}
     </ul>
+    </div>
+    </div>
 
 {% endblock %}

@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Welcome!{% endblock %}</title>
-
+    <title>{% block title %}Site Officiel du Breizh Fobal Klub{% endblock %}</title>
+    <link rel="shortcut icon" href="{{ asset('icons/logo_club.ico') }}" type="image/x-icon"/>
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
-
 </head>
 <body>
 <header class="header">
-    <h1 class="siteTitle">Breizh Fobal Klub</h1>
+    <div class="siteTitle">
+        <img class="clubLogoHeader img-fluid" src="{{ asset('uploads/logo_club/logo_club.png') }}" alt="logoheader"/>
+        <div class="siteTitleText">
+            <h1>Breizh Fobal Klub</h1>
+        </div>
+    </div>
+
     {% if app.user %} {# si l'user est connecté #}
         <div class="mb-3">
             {{ app.user.lastName }} {{ app.user.firstName }}
@@ -49,7 +54,7 @@
                         Le Club
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Histoire du club</a>
+                        <a class="dropdown-item" href="{{ path('history_club') }}">Histoire du club</a>
                         <a class="dropdown-item" href="#">Le Conseil d'Administration</a>
                         <a class="dropdown-item" href="{{ path('infrastructures') }}">Infrastructures</a>
                     </div>
@@ -72,7 +77,7 @@
                         Compétitions
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Résultats</a>
+                        <a class="dropdown-item" href="{{ path('results') }}">Résultats</a>
                         <a class="dropdown-item" href="#">Calendrier</a>
                     </div>
                 </li>
@@ -95,12 +100,12 @@
                     </div>
                 </li>
                 <li class="nav-item  dropdown">
-                    <a class="nav-link dropdown" href="#" id="navbarDropdownMenuLink" role="button"
+                    <a class="nav-link dropdown" href="" id="navbarDropdownMenuLink" role="button"
                        data-toggle="dropdown" aria-expanded="false">
                         Nous rejoindre
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="">Demande d'inscription</a>
+                        <a class="dropdown-item" href="{{ path('preinscription') }}">Demande d'inscription</a>
                     </div>
                 </li>
 

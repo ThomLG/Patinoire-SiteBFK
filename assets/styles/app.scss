@@ -18,34 +18,44 @@ body {
 }
 
 //------------------------------------------Mise en page du Header---------------------------------------------
+.header{
+  width: 100%;
+}
 
-.siteTitle {
-  color: black;
-  font-family: "Rambla";
-  font-size: 25pt;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
+.siteTitle{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 5px auto;
+    .clubLogoHeader{
+      margin: 0 auto;
+      height: 120px;
+      width: 120px;
+    }
+    .siteTitleText h1{
+      color:black;
+      font-family: Rambla;
+      font-size: 28pt;
+      font-weight: bolder;
+      text-align: center;
+      text-transform: uppercase;
+    }
 }
 
 .bfkNavbar {
   background-color: mediumaquamarine;
   width: 100%;
-}
-
-.bfkNavbar a {
-  color: black !important;
-  font-family: Poppins;
-  text-transform: uppercase;
-}
-
-.bfkNavbar a:hover {
-  background-color: #0000cc;
-}
-
-.dropdown-menu {
-  background-color: purple;
-
+  a {
+    color: black !important;
+    font-family: Poppins;
+    text-transform: uppercase;
+  }
+  a:hover {
+    background-color: #0000cc;
+  }
+  .dropdown-menu {
+    background-color: purple;
+  }
 }
 
 //------------------------------------Mise en page de la page d'accueil------------------------------------------------
@@ -195,19 +205,25 @@ body {
   .bfkNavbar a {
     font-size: 16pt;
   }
+
   .dropdown {
     position: relative;
     display: inline-block;
   }
+
+  .dropdown-item{
+    &:hover{
+      display: block;
+    }
+  }
+
 
   .dropdown-menu {
     display: none;
     position: absolute;
     z-index: 1;
   }
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
+
   //-------------------------------------------------------------------------------------------------------------
 
   .content {
