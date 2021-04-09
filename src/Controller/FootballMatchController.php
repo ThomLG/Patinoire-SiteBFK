@@ -13,12 +13,10 @@ class FootballMatchController extends AbstractController
     /**
      * @Route("/resultats", name="results")
      */
-    public function index(PartnerRepository $partnerRepository, FootballMatchRepository $footballMatchRepository): Response
+    public function index(FootballMatchRepository $footballMatchRepository): Response
     {
-        $partners=$partnerRepository->findAll();
         $results=$footballMatchRepository->findAll();
         return $this->render('football_match/index.html.twig', [
-            'partners'=>$partners,
             'results' => $results,
         ]);
     }

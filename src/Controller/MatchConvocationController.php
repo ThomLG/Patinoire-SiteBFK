@@ -15,9 +15,8 @@ class MatchConvocationController extends AbstractController
     /**
      * @Route("/match_convocation", name="match_convocation")
      */
-    public function index(Request $request, PartnerRepository $partnerRepository): Response
+    public function index(Request $request): Response
     {
-        $partners=$partnerRepository->findAll();
         $convocation=new MatchConvocation();
         $form=$this->createForm(MatchConvocationType::class, $convocation);
         $form->handleRequest($request);

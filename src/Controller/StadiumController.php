@@ -13,13 +13,11 @@ class StadiumController extends AbstractController
     /**
      * @Route("/infrastructures", name="infrastructures")
      */
-    public function index(StadiumRepository $stadiumRepository, PartnerRepository $partnerRepository): Response
+    public function index(StadiumRepository $stadiumRepository): Response
     {
         $stadiums=$stadiumRepository->findAll();
-        $partners=$partnerRepository->findAll();
         return $this->render('stadium/index.html.twig', [
             'stadiums' => $stadiums,
-            'partners'=>$partners
         ]);
     }
 }

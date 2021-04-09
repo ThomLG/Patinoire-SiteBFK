@@ -13,13 +13,11 @@ class HistoryClubController extends AbstractController
     /**
      * @Route("/histoire_club", name="history_club")
      */
-    public function index(HistoryClubRepository $historyClubRepository, PartnerRepository $partnerRepository): Response
+    public function index(HistoryClubRepository $historyClubRepository): Response
     {
         $historiesClub=$historyClubRepository->findAll();
-        $partners=$partnerRepository->findAll();
         return $this->render('history_club/index.html.twig', [
             'historiesClub'=>$historiesClub,
-            'partners' => $partners,
         ]);
     }
 }

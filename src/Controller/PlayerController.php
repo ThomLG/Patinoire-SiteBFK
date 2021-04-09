@@ -14,14 +14,12 @@ class PlayerController extends AbstractController
     /**
      * @Route("/seniors", name="seniors")
      */
-    public function index(PlayerRepository $playerRepository, CategoryRepository $categoryRepository, PartnerRepository $partnerRepository): Response
+    public function index(PlayerRepository $playerRepository, CategoryRepository $categoryRepository): Response
     {
         $category=$categoryRepository->findOneBy(['categoryName'=>'Seniors']);
-        $partners=$partnerRepository->findAll();
         $players=$playerRepository->findPlayerByCategory('Seniors');
         return $this->render('player/index.html.twig', [
             'players' => $players,
-            'partners'=>$partners,
             'category'=>$category
         ]);
     }

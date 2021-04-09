@@ -17,9 +17,8 @@ class PreinscriptionController extends AbstractController
      * @Route("/preinscription", name="preinscription", methods={"GET", "POST"}))
      */
 
-    public function new(Request $request, PartnerRepository $partnerRepository): Response
+    public function new(Request $request): Response
     {
-        $partners = $partnerRepository->findAll();
         $preinscription = new Preinscription();
         $form = $this->createForm(PreinscriptionType::class, $preinscription);
         $form->handleRequest($request);
@@ -32,7 +31,6 @@ class PreinscriptionController extends AbstractController
         }
         return $this->render('preinscription/index.html.twig', [
             'preinscriptionForm' => $form->createView(),
-            'partners' => $partners
         ]);
         }
 }

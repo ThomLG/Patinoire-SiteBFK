@@ -118,12 +118,9 @@
 {% block content %}
 {% endblock %}
 
-<div class="partnerContent">
-    {% for partner in partners %}
-        <li><a href="{{ partner.partnerSiteLink }}"><img src="{{ asset('uploads/partners/' ~ partner.partnerLogo2) }}"
-                                                         alt="{{ partner.partnerName }}"></a></li>
-    {% endfor %}
-</div>
+{{ render(controller(
+    'App\\Controller\\PartnerController::partnerblock'
+)) }}
 
 <footer class="footerContainer">
     Mentions légales
