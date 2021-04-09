@@ -3,15 +3,22 @@
 {% block title %}Histoire | Site Officiel du Breizh Fobal Klub{% endblock %}
 {% block content %}
     <div class="main">
-        <h1>L'Histoire du club</h1>
-        <div class="content">
-            <div class="historyClubContent">
-                <div class="historyClubText">
-
+        <h1 class="mainTitle">L'Histoire du club</h1>
+        <div class="historyClubContent">
+            <div class="historyClubContainer">
+                {% for historyClub in historiesClub %}
+                    <div class="historyClubText">
+                        {{ historyClub.historyClubText|raw}}
+                    </div>
+                {% endfor %}
+                <div class="historyClubPictureContainer">
+                    <div class="historyClubPictureDescription">
+                        <p class="historyClubPictureDescriptionText">La première équipe de l'histoire du BreizhFobalKlub en 2014</p>
+                    </div>
+                    <img class="historyClubPicture" src="{{ asset('uploads/infrastructures/BFK_2014-2015.jpg') }}"
+                         alt="img">
                 </div>
-                <img class="historyClubPicture" src="{{ asset('uploads/infrastructures/BFK_2014-2015.jpg') }}" alt="img">
             </div>
-
         </div>
     </div>
 {% endblock %}

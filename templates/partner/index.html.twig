@@ -3,17 +3,21 @@
 {% block title %}Partenaires | Site Officiel du Breizh Fobal Klub{% endblock %}
 
 {% block content %}
-<div class="main">
-    <h1>Nos Partenaires</h1>
-    {% for partner in partners %}
-        <ul>
-            <li>
-                <img src="{{ asset('uploads/partners/' ~ partner.partnerLogo) }}" alt="{{ partner.partnerName }}">
-                {{ partner.partnerName }}
-                {{ partner.partnerDescription }}
-            </li>
-        </ul>
-    {%  endfor %}
-</div>
+    <div class="main">
+        <h1 class="mainTitle">Nos Partenaires</h1>
+        <div class="partnerCardContent">
+            {% for partner in partners %}
+                <div class="partnerCard card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ asset('uploads/partners/' ~ partner.partnerLogo) }}"
+                         alt="{{ partner.partnerName }}">
+                    <div class=" partnerCardBody card-body">
+                        <h5 class="partnerCardTitle card-title"> {{ partner.partnerName }}</h5>
+                        <p class="card-text"> {{ partner.partnerDescription }}</p>
+                        <a href="{{ partner.partnerSiteLink }}" class="partnerCardBtn btn btn-primary">Site Internet</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
 

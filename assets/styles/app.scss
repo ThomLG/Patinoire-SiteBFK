@@ -18,44 +18,54 @@ body {
 }
 
 //------------------------------------------Mise en page du Header---------------------------------------------
-.header{
+.header {
   width: 100%;
 }
 
-.siteTitle{
+.siteTitle {
   background-color: white;
   display: flex;
   flex-direction: column;
   margin: 5px 5px auto;
-    .clubLogoHeader{
-      margin: 0 auto;
-      height: 120px;
-      width: 120px;
-    }
-    .siteTitleText h1{
-      color:black;
-      font-family: Rambla;
-      font-size: 28pt;
-      font-weight: bolder;
-      text-align: center;
-      text-transform: uppercase;
-    }
+
+  .clubLogoHeader {
+    margin: 0 auto;
+    height: 120px;
+    width: 120px;
+  }
+
+  .siteTitleText h1 {
+    color: black;
+    font-family: Rambla;
+    font-size: 28pt;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
 
 .bfkNavbar {
   background-color: mediumaquamarine;
   width: 100%;
+
   a {
     color: black !important;
     font-family: Poppins;
     text-transform: uppercase;
   }
+
   a:hover {
     background-color: #0000cc;
   }
+
   .dropdown-menu {
     background-color: purple;
   }
+}
+
+.connectionContainer{
+  background-color: #0f6674;
+  margin: 5px;
 }
 
 //------------------------------------Mise en page de la page d'accueil------------------------------------------------
@@ -158,14 +168,37 @@ body {
   flex: 1;
   align-items: center;
   justify-content: space-evenly;
+
+  img {
+    height: 120px;
+    width: 200px;
+    padding: 10px;
+    object-fit: contain
+  }
 }
 
-.partnerContent img {
-  height: 120px;
-  width: 200px;
-  padding: 10px;
-  object-fit: contain
+.partnerCardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .partnerCard {
+    margin: 5px;
+  }
+  .partnerCardBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .partnerCardTitle{
+    text-align: center;
+  }
+  .partnerCardBtn{
+    background-color: #1b1e21;
+    border: solid 2px red;
+  }
 }
+
 
 //--------------------------------------------FOOTER---------------------------------------------------------
 
@@ -179,17 +212,69 @@ body {
 
 //-------------------------Mise en page des titres des pages-------------------------------------------------------
 
-
-.titlePage{
+.titlePage {
   font-size: 18pt;
   text-align: center;
 }
-.stadiumSection h3{
+
+.stadiumSection h3 {
   font-size: 14pt;
 }
 
-//------------------------ à partir de 720 px et plus, il passe en flex-direction row----------------------------
-@media screen and (min-width: 720px) {
+//-------------------------Mise en page histoire du club-----------------------------------------------
+.historyClubContent {
+  display: flex;
+  justify-content: center;
+
+  .historyClubContainer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+    .historyClubText {
+    }
+
+    .historyClubPictureContainer {
+      background-color: yellow;
+      margin: 0 0 auto;
+      position: relative;
+      width: 100%;
+
+      .historyClubPictureDescription {
+        background: rgba(0, 0, 0, 0.5);
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+
+        .historyClubPictureDescriptionText {
+          color: white;
+          font-size: 10pt;
+          margin: 0 0 0 auto;
+          text-align: center;
+          width: 100%;
+        }
+      }
+
+      .historyClubPicture {
+        border: solid red 1px;
+        margin: 0 0 auto;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+//-----------------------------Titres Principaux------------------------------------------------------
+
+.mainTitle{
+  text-align: center;
+}
+
+//------------------------ à partir de 768 px et plus, il passe en flex-direction row----------------------------
+@media screen and (min-width: 768px) {
   .header h1 {
     font-size: 35pt;
   }
@@ -211,18 +296,33 @@ body {
     display: inline-block;
   }
 
-  .dropdown-item{
-    &:hover{
+  .dropdown-item {
+    &:hover {
       display: block;
     }
   }
-
 
   .dropdown-menu {
     display: none;
     position: absolute;
     z-index: 1;
   }
+
+  .connectionContainer {
+    background-color: white;
+    float: right;
+    text-align: center;
+    height: 30px;
+    width: 200px;
+  }
+
+    .connectionContainerConnected {
+      background-color: white;
+      float: right;
+      text-align: center;
+      height: 150px;
+      width: 200px;
+    }
 
   //-------------------------------------------------------------------------------------------------------------
 
@@ -278,7 +378,7 @@ body {
     border: solid red 2px;
     margin: 10px;
   }
-//---------------------------------Mise en page partenaires---------------------------------------------
+  //---------------------------------Mise en page partenaires---------------------------------------------
   .partnerContent {
     flex-direction: row;
     width: 100%;
@@ -291,7 +391,23 @@ body {
     padding: 10px;
   }
 
-//------------------------------------------Mise en page infrastructures------------------------------
+  .partnerCardContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: center;
+
+    .partnerCard {
+      margin: 5px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+
+  //------------------------------------------Mise en page infrastructures------------------------------
 
   .stadiumContent {
     display: flex;
@@ -305,12 +421,11 @@ body {
     background-color: white;
     margin: 4px;
     width: 26rem;
-}
-//-------------------------Mise en page des titres des pages-------------------------------------------------------
+  }
+  //-------------------------Mise en page des titres des pages-------------------------------------------------------
 
 
-
-//-----------------------------------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------------------------------
   .footerContainer {
     width: 100%;
   }

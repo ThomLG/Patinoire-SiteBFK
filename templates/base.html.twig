@@ -18,26 +18,28 @@
         </div>
     </div>
 
-    {% if app.user %} {# si l'user est connecté #}
-        <div class="mb-3">
-            {{ app.user.lastName }} {{ app.user.firstName }}
-        </div>
-        <a class="dropdown-item" href="profile.html">
-            <i class="fa fa-user">
-            </i>
-            Mon compte
-        </a>
-        <a class="dropdown-item" href="{{ path('app_logout') }}">
-            <i class="fa fa-sign-out">
-            </i>
-            Se déconnecter
-        </a>
-    {% else %} {# si l'user n'est pas connecté #}
-        <a class="dropdown-item" href="{{ path('app_login') }}">
-            <i class="fa fa-sign-in"></i>
-            Se connecter
-        </a>
-    {% endif %}
+        {% if app.user %} {# si l'user est connecté #}
+            <div class="connectionContainerConnected">
+                <div class="mb-3">
+                    {{ app.user.lastName }} {{ app.user.firstName }}
+                </div>
+                <a class="dropdown-item" href="profile.html">
+                    <i class="fa fa-user">
+                    </i>
+                    Gestion des contenus
+                </a>
+                <a class="dropdown-item" href="{{ path('app_logout') }}">
+                    <i class="fa fa-sign-out">
+                    </i>
+                    Se déconnecter
+                </a>
+            </div>
+        {% else %} {# si l'user n'est pas connecté #}
+            <a class="connectionContainer dropdown-item" href="{{ path('app_login') }}">
+                <i class="fa fa-sign-in"></i>
+                Se connecter
+            </a>
+        {% endif %}
 
     {# Barre de navigation #}
     <nav class="bfkNavbar navbar navbar-expand-lg navbar-light">
@@ -118,7 +120,8 @@
 
 <div class="partnerContent">
     {% for partner in partners %}
-        <li><img src="{{ asset('uploads/partners/' ~ partner.partnerLogo2) }}" alt="{{ partner.partnerName }}"></li>
+        <li><a href="{{ partner.partnerSiteLink }}"><img src="{{ asset('uploads/partners/' ~ partner.partnerLogo2) }}"
+                                                         alt="{{ partner.partnerName }}"></a></li>
     {% endfor %}
 </div>
 

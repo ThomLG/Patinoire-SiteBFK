@@ -37,6 +37,11 @@ class Partner
      */
     private $partnerLogo2;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $partnerSiteLink;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +91,18 @@ class Partner
     public function setPartnerLogo2(?string $partnerLogo2): self
     {
         $this->partnerLogo2 = $partnerLogo2;
+
+        return $this;
+    }
+
+    public function getPartnerSiteLink(): ?string
+    {
+        return $this->partnerSiteLink;
+    }
+
+    public function setPartnerSiteLink(?string $partnerSiteLink): self
+    {
+        $this->partnerSiteLink = $partnerSiteLink;
 
         return $this;
     }
