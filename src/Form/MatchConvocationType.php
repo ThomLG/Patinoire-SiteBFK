@@ -18,6 +18,9 @@ class MatchConvocationType extends AbstractType
         $builder
             ->add('matchConvocation', EntityType::class,[
                 'class' => FootballMatch::class,
+                'choice_label'=>function($footballMatch){
+                return $footballMatch->getBfkTeam()." - ".$footballMatch->getBfkTeamOpponent();// mise en forme du select avec des fonctions présentes dans  le fichier FootballMatchEntity
+                },
                 'label'=>'Match'])
             ->add('playerConvocation', EntityType::class,[
                 'class'=>Player::class,

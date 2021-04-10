@@ -125,6 +125,11 @@ class FootballMatch
         return $this->getId();
     }
 
+    public function matchTeams():string
+    {
+        return $this->getFootballMatchDate()." ".$this->getBfkTeam()." ".$this->getBfkTeamOpponent();
+    }
+
     /**
      * @return Collection|MatchConvocation[]
      */

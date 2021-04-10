@@ -29,7 +29,6 @@ class MatchConvocationController extends AbstractController
 
         return $this->render('match_convocation/index.html.twig', [
             'matchConvocationForm' => $form->createView(),
-            'partners' => $partners,
         ]);
     }
 }
