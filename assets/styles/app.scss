@@ -267,6 +267,19 @@ body {
   }
 }
 
+//-----------------------------Tableau résultat---------------------------------------------------
+
+.tableMatch {
+  background-color: yellow;
+  font-size: 8pt;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px 5px 5px 5px;
+  td{
+    background-color: white;
+  }
+}
+
 //-----------------------------Titres Principaux------------------------------------------------------
 
 .mainTitle{

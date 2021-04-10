@@ -21,12 +21,17 @@
         {% if app.user %} {# si l'user est connecté #}
             <div class="connectionContainerConnected">
                 <div class="mb-3">
-                    {{ app.user.lastName }} {{ app.user.firstName }}
+                    {{ app.user.firstName }} {{ app.user.lastName }}
                 </div>
                 <a class="dropdown-item" href="profile.html">
                     <i class="fa fa-user">
                     </i>
                     Gestion des contenus
+                </a>
+                <a class="dropdown-item" href="{{ path('match_convocation') }}">
+                    <i class="fa fa-football-ball">
+                    </i>
+                    Convocations
                 </a>
                 <a class="dropdown-item" href="{{ path('app_logout') }}">
                     <i class="fa fa-sign-out">
