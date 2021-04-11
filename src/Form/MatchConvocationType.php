@@ -27,8 +27,7 @@ class MatchConvocationType extends AbstractType
                 'class'=>Player::class,
                 'multiple'=>true,
                 'expanded'=>true,
-                'label'=>'Joueurs',
-                'empty_data'=>""])
+                'label'=>'Joueurs',])
             ->add('submit',SubmitType::class, ['label'=>'Valider la convocation']);
         ;
     }

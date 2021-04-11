@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+    {% block title %}Convocations | Site Officiel du Breizh Fobal Klub{% endblock %}
+
+{% block content %}
+
+<div class="main">
+    <div class="content">
+        {%  for convocation in convocations %}
+            {{convocation.matchConvocation}}
+            <ul>
+                {% for pc in convocation.playerConvocation %}
+                    <li>{{ pc.__toString}}</li>
+                {% endfor %}
+            </ul>
+        {% endfor  %}
+    </div>
+
+</div>
+{% endblock %}

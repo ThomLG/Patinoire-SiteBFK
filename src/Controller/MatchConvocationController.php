@@ -32,4 +32,17 @@ class MatchConvocationController extends AbstractController
             'matchConvocationForm' => $form->createView(),
         ]);
     }
+
+    /**
+     * @Route("/convocations", name="convocations")
+     */
+    public function convocationListe(MatchConvocationRepository $matchConvocationRepository):Response
+    {
+        $convocations=$matchConvocationRepository->findAll();
+        return $this->render('match_convocation/convocations.html.twig', [
+            'convocations' => $convocations
+        ]);
+    }
+
+
 }
