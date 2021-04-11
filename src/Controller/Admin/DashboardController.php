@@ -8,6 +8,7 @@ use App\Entity\MatchConvocation;
 use App\Entity\Novelty;
 use App\Entity\Partner;
 use App\Entity\Player;
+use App\Entity\Preinscription;
 use App\Entity\Stadium;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
@@ -43,6 +44,8 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Joueurs','iconclass',Player::class);
         yield MenuItem::linkToCrud('Histoire du club','iconclass',HistoryClub::class);
         yield MenuItem::linkToCrud('Partenaires','iconclass',Partner::class);
+        yield MenuItem::linkToCrud('Convocations','iconclass',MatchConvocation::class);
+        yield MenuItem::linkToCrud('Préinscriptions','iconclass',Preinscription::class);
     }
 
     public function configureAssets(): Assets

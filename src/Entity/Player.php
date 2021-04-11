@@ -6,6 +6,7 @@ use App\Repository\PlayerRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\DocBlock\Tags\Formatter;
 
 /**
  * @ORM\Entity(repositoryClass=PlayerRepository::class)
@@ -193,7 +194,11 @@ class Player
 
     public function __toString():string
     {
-        return $this->getLastName();
+        return $this->getLastName()." ".$this->getFirstName()." - ".$this->getPosition();
+    }
+
+    public function convocationFormatPlayer():string{
+        return $this->getLastName()." ".$this->getFirstName()." ".$this->getPosition();
     }
 
     /**

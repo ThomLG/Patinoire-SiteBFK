@@ -65,6 +65,11 @@ class FootballMatch
         return $this->footballMatchDate;
     }
 
+    public function getFootballMatchDateToString():string //obtenir la date en mode string
+    {
+        return $this->getFootballMatchDate()->format("d-m-Y");
+    }
+
     public function setFootballMatchDate(?\DateTimeInterface $footballMatchDate): self
     {
         $this->footballMatchDate = $footballMatchDate;
@@ -122,12 +127,12 @@ class FootballMatch
 
     public function __toString():string
     {
-        return $this->getId();
+        return $this->getFootballMatchDateToString()."-".$this->getBfkTeam()." - ".$this->getBfkTeamOpponent();
     }
 
     public function matchTeams():string
     {
-        return $this->getFootballMatchDate()." ".$this->getBfkTeam()." ".$this->getBfkTeamOpponent();
+        return $this->getFootballMatchDate()." - ".$this->getBfkTeam()." ".$this->getBfkTeamOpponent();
     }
 
     /**
