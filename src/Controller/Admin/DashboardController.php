@@ -32,6 +32,7 @@ class DashboardController extends AbstractDashboardController
     {
         return Dashboard::new()
             ->setTitle('BFKSiteWeb');
+
     }
 
     public function configureMenuItems(): iterable
@@ -46,6 +47,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Partenaires','iconclass',Partner::class);
         yield MenuItem::linkToCrud('Convocations','iconclass',MatchConvocation::class);
         yield MenuItem::linkToCrud('Préinscriptions','iconclass',Preinscription::class);
+        yield MenuItem::linkToRoute('Retour au site','fa fa-home','homepage');
     }
 
     public function configureAssets(): Assets

@@ -5,14 +5,16 @@
 
 <div class="main">
     <div class="content">
+        <ul>
         {%  for convocation in convocations %}
-            {{convocation.matchConvocation}}
+            <li>{{convocation.matchConvocation}}</li>
             <ul>
                 {% for pc in convocation.playerConvocation %}
                     <li>{{ pc.__toString}}</li>
                 {% endfor %}
             </ul>
         {% endfor  %}
+        </ul>
     </div>
 
 </div>

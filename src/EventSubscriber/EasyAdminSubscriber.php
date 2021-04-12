@@ -29,24 +29,24 @@ class EasyAdminSubscriber implements EventSubscriberInterface
         ];
     }
 
-    public function updateUser(BeforeEntityUpdatedEvent $event) // mise à jour de l'user
+    public function updateUser(BeforeEntityUpdatedEvent $event)
     {
         $entity = $event->getEntityInstance();
 
-        if (!($entity instanceof User)) { // si c'est différent d'une instanciation (existe déjà), on retourne rien
+        if (!($entity instanceof User)) {
             return;
         }
-        $this->setPassword($entity); // sinon on fixe (crée) le mot de passe
+        $this->setPassword($entity);
     }
 
-    public function addUser(BeforeEntityPersistedEvent $event) // on ajoute un nouvel user
+    public function addUser(BeforeEntityPersistedEvent $event)
     {
         $entity = $event->getEntityInstance();
 
-        if (!($entity instanceof User)) {// si c'est différent d'une instanciation (existe déjà), on retourne rien
+        if (!($entity instanceof User)) {
             return;
         }
-        $this->setPassword($entity); // sinon on fixe (crée) le mot de passe
+        $this->setPassword($entity);
     }
 
     /**
@@ -57,8 +57,8 @@ class EasyAdminSubscriber implements EventSubscriberInterface
         $pass = $entity->getPassword();
 
         $entity->setPassword($this->passwordEncoder->encodePassword($entity, $pass));
-        $this->entityManager->persist($entity); //signale à doctrine que l'objet doit être enregistré.
-        $this->entityManager->flush(); //envoi à la base de donnée
+        $this->entityManager->persist($entity);
+        $this->entityManager->flush();
     }
 
 }
