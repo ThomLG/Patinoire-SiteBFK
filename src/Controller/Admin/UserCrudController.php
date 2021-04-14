@@ -4,10 +4,6 @@ namespace App\Controller\Admin;
 
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use EasyCorp\Bundle\EasyAdminBundle\Field\ArrayField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 
@@ -18,14 +14,21 @@ class UserCrudController extends AbstractCrudController
         return User::class;
     }
 
-    /*
     public function configureFields(string $pageName): iterable
     {
-        return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
-        ];
+        $out = [ TextField::new('email') ];
+
+        if ($pageName !== 'index') {
+            $out[] = TextField::new('plainPassword')
+                ->setLabel('Password')
+                ->setFormType(PasswordType::class)
+                ->setRequired($pageName === 'new');
+        }
+
+        return array_merge($out, [
+            TextField::new('lastName'),
+            TextField::new('firstName'),
+            TextField::new('function'),
+        ]);
     }
-    */
 }
