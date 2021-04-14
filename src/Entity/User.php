@@ -28,6 +28,8 @@ class User implements UserInterface
      */
     private $roles = [];
 
+    private $plainPassword;
+
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
@@ -91,6 +93,18 @@ class User implements UserInterface
     public function setRoles(array $roles): self
     {
         $this->roles = $roles;
+
+        return $this;
+    }
+
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    public function setPlainPassword($plainPassword)
+    {
+        $this->plainPassword = $plainPassword;
 
         return $this;
     }
