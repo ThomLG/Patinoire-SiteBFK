@@ -1,0 +1,50 @@
+@import "navbar/navbar";
+.header {
+  background-color: white;
+  width: 100%;
+
+  .siteTitle {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 5px auto;
+
+    .clubLogoHeader {
+      margin: 0 auto;
+      height: 120px;
+      width: 120px;
+    }
+
+    .siteTitleText h1 {
+      color: black;
+      font-family: Rambla;
+      font-size: 28pt;
+      font-weight: bolder;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  .connectionContainer{
+    background-color: white;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header h1 {
+    font-size: 35pt;
+  }
+  .connectionContainer {
+    background-color: white;
+    float: right;
+    text-align: center;
+    height: 30px;
+    width: 200px;
+  }
+
+  .connectionContainerConnected {
+    background-color: white;
+    float: right;
+    text-align: center;
+    height: 150px;
+    width: 200px;
+  }
+}

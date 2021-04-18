@@ -1,26 +1,25 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{category.categoryName}} | Site Officiel du Breizh Fobal Klub{% endblock %}
+{% block title %}{{ category.categoryName }} | Site Officiel du Breizh Fobal Klub{% endblock %}
 
 {% block content %}
-<div class="main">
-    <h1>{{category.categoryName}}</h1>
-    <div class="content">
+    <div class="main">
+        <h1 class="titlePage">{{ category.categoryName }}</h1>
+        <div class="playerContent">
             {% for player in players %}
-            <div class="card">
-                <img class="card-img-top" src="{{asset('uploads/players_photos/' ~ player.playerPhoto)}}" alt="mm">
-                <div class="card-body">
-                    <h3 class="card-title">{{ player.firstName }} {{ player.lastName }}</h3>
-                    <p class="card-text">Date de naissance : {{ player.dateOfBirth|date("d/m/Y") }}</p>
-                    <p class="card-text">Poste : {{ player.position }}</p>
-                    <p class="card-text">Nombre de matches{{ player.nbMatches }}</p>
-                    <p class="card-text">Nombre de buts{{ player.nbGoals }}</p>
-                    <p class="card-text">Nombre de passes décisives{{ player.nbAssits }}</p>
-                </div>
-
-            </div>
+                <section class="playerCard card">
+                    <img class="card-img-top" src="{{ asset('uploads/players_photos/' ~ player.playerPhoto) }}"
+                         alt="mm">
+                    <div class="playerCardBody card-body">
+                        <h3 class="card-title">{{ player.firstName }} {{ player.lastName }}</h3>
+                        <p class="card-text">Date de naissance : {{ player.dateOfBirth|date("d/m/Y") }}</p>
+                        <p class="card-text">Poste : {{ player.position }}</p>
+                        <p class="card-text">Nombre de matches : {{ player.nbMatches }}</p>
+                        <p class="card-text">Nombre de buts : {{ player.nbGoals }}</p>
+                        <p class="card-text">Nombre de passes décisives : {{ player.nbAssits }}</p>
+                    </div>
+                </section>
             {% endfor %}
-
+        </div>
     </div>
-</div>
 {% endblock %}

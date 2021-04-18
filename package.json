@@ -1,5 +1,10 @@
 {
     "devDependencies": {
+        "autoprefixer": "^10.2.5",
+        "clean-css-cli": "^4.3.0",
+        "postcss-cli": "^7.1.2",
+        "rimraf": "^3.0.2",
+        "postcss-loader": "^5.2.0",
         "@symfony/stimulus-bridge": "^2.0.0",
         "@symfony/webpack-encore": "^1.0.0",
         "core-js": "^3.0.0",
@@ -24,6 +29,7 @@
         "node-sass": "^5.0.0",
         "popper.js": "^1.16.1",
         "postcss-loader": "^5.2.0",
+        "rimraf": "^3.0.2",
         "sass-loader": "^11.0.1"
     }
 }

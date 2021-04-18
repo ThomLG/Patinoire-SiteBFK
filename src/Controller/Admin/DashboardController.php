@@ -20,9 +20,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DashboardController extends AbstractDashboardController
 {
+    // Dans un premier temps, je définis la route de mon Dashboard d'administration.
     /**
      * @Route("/admin", name="admin")
      */
+
     public function index(): Response
     {
         return parent::index();
@@ -31,23 +33,23 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('BFKSiteWeb');
+            ->setTitle('BFKSiteWeb');// Je définis ici le nom du titre du Dashboard EasyAdmin
 
     }
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linktoDashboard('Accueil', 'fa fa-home');
-        yield MenuItem::linkToCrud('Utilisateurs', 'icon class', User::class); //ajout gestion des user dans le menu du dashboard easyadmin
-        yield MenuItem::linkToCrud('News', 'icon class', Novelty::class); //ajout gestion des news dans le menu du dashboard easyadmin
-        yield MenuItem::linkToCrud('Matches', 'icon class', FootballMatch::class); //ajout des matches dans le menu du dashboard easyadmin
-        yield MenuItem::linkToCrud('Infrastructures', 'icon class', Stadium::class);//ajout des stades dans le menu du dashboard easyadmin
-        yield MenuItem::linkToCrud('Joueurs','iconclass',Player::class);
-        yield MenuItem::linkToCrud('Histoire du club','iconclass',HistoryClub::class);
-        yield MenuItem::linkToCrud('Partenaires','iconclass',Partner::class);
-        yield MenuItem::linkToCrud('Convocations','iconclass',MatchConvocation::class);
-        yield MenuItem::linkToCrud('Préinscriptions','iconclass',Preinscription::class);
-        yield MenuItem::linkToRoute('Retour au site','fa fa-home','homepage');
+        yield MenuItem::linktoDashboard('Accueil', 'fa fa-home');// ajout d'un lien vers la page d'accueil du dashboard
+        yield MenuItem::linkToCrud('Utilisateurs', 'icon class', User::class); //ajout du CRDUD gestion de l'entité User dans le menu du dashboard easyadmin
+        yield MenuItem::linkToCrud('News', 'icon class', Novelty::class); //ajout du CRUD gestion de l'entité Novelty dans le menu du dashboard easyadmin
+        yield MenuItem::linkToCrud('Matches', 'icon class', FootballMatch::class); //ajout du CRUD de l'entité FootballMatch dans le menu du dashboard easyadmin
+        yield MenuItem::linkToCrud('Infrastructures', 'icon class', Stadium::class);//ajout du CRUD de l'entité Stadium dans le menu du dashboard easyadmin
+        yield MenuItem::linkToCrud('Joueurs','iconclass',Player::class);//ajout du CRUD de l'entité Stadium stades dans le menu du dashboard easyadmin
+        yield MenuItem::linkToCrud('Histoire du club','iconclass',HistoryClub::class);//ajout du CRUD de l'entité Stadium stades dans le menu du dashboard easyadmin
+        yield MenuItem::linkToCrud('Partenaires','iconclass',Partner::class);//ajout du CRUD de l'entité Partner dans le menu du dashboard easyadmin
+        yield MenuItem::linkToCrud('Convocations','iconclass',MatchConvocation::class);//ajout du CRUD de l'entité  MatchConvocation dans le menu du dashboard easyadmin
+        yield MenuItem::linkToCrud('Préinscriptions','iconclass',Preinscription::class);//ajout du CRUD de l'entité Preinscription dans le menu du dashboard easyadmin
+        yield MenuItem::linkToRoute('Retour au site','fa fa-home','homepage');// ajout d'un lien de redirection vers la page d'accueil du site web
     }
 
     public function configureAssets(): Assets

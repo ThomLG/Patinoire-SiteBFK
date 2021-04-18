@@ -15,17 +15,19 @@ class UserCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
     {
-        return User::class;
+        return User::class ;
     }
 
-    /*
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
+            EmailField::new('email','E-mail'),
+            TextField::new('password','Mot de passe'),
+            ArrayField::new('roles'),
+            TextField::new('function', 'Fonction'),
+            TextField::new('firstName','Prénom'),
+            TextField::new('lastName', 'Nom')
         ];
     }
-    */
+
 }

@@ -4,8 +4,6 @@ namespace App\Form;
 
 use App\Entity\Category;
 use App\Entity\Preinscription;
-use Doctrine\DBAL\Types\StringType;
-use Doctrine\ORM\Mapping\Entity;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -21,12 +19,13 @@ class PreinscriptionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('preInscriptionLastName', TextType::class, ['label'=>'Nom'])
+            ->add('preInscriptionLastName', TextType::class, ['label'=>'Nom'])//relié à l'entité
             ->add('preInscriptionFirstName', TextType::class, ['label'=>'Prénom'])
             ->add('preInscriptionDateBirth', DateType::class,['label'=>'Date de naissance'])
             ->add('preInscriptionEmail', EmailType::class, ['label'=>'Adresse e-mail', ])
             ->add('preInscriptionPhoneNumber',TextType::class, ['label'=>'Numéro de téléphone', 'attr'=>['maxlength'=>10]])
             ->add('preInscriptionPosition',ChoiceType::class, ['label'=>'Poste',
+                //création de choix pour la colonne preInscriptionPosition
                 'choices'=>['Gardien de but'=>'Gardien de but',
                             'Défenseur'=>'Défenseur',
                             'Milieu de terrain'=>'Milieu de terrain',
@@ -34,9 +33,10 @@ class PreinscriptionType extends AbstractType
                 ])
             ->add('preInscriptionLastClub',TextType::class, ['label'=>'Dernier Club'])
             ->add('preInscriptionCategory',EntityType::class,[
+                // va lister les données de la table catégorie et permettre un choix
                 'class' => Category::class,
                 'label'=>'Catégorie'])
-            ->add('submit',SubmitType::class);
+            ->add('submit',SubmitType::class); // envoi du formulaire en base de bdd
         ;
     }
 

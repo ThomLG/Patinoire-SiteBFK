@@ -1,0 +1,13 @@
+.footerContainer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+
+@media screen and (min-width: 768px) {
+  .footerContainer {
+    width: 100%;
+  }
+}

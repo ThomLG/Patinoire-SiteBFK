@@ -125,9 +125,10 @@ class FootballMatch
         return $this;
     }
 
-    public function __toString():string
+    public function __toString():string //
     {
         return $this->getFootballMatchDateToString()."-".$this->getBfkTeam()." - ".$this->getBfkTeamOpponent();
+    // ce qui sera affiché dans easy admin ou dans les formulaires côté front lorsque l'entité sera appelée par exemple
     }
 
     public function matchTeams():string

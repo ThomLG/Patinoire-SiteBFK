@@ -1,7 +1,7 @@
 security:
     encoders:
         App\Entity\User:
-            algorithm: auto
+            algorithm: auto # Utiliser l'encodeur de mot de passe natif. Cette valeur sélectionne automatiquement le meilleur algorithme de hachage possible
 
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
@@ -20,11 +20,11 @@ security:
             provider: app_user_provider
             guard:
                 authenticators:
-                    - App\Security\LoginFormAuthenticator
+                    - App\Security\LoginFormAuthenticator #ajouté lors de du loginAuthentificator via la commande make:auth
             logout:
                 path: app_logout
                 # where to redirect after logout
-                target: "homepage" # qd l'utilisateur se déconnecte, il est renvoyé à la page default.
+                target: "homepage" # qd l'utilisateur se déconnecte, il est renvoyé à la page homepage.
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
@@ -35,5 +35,5 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        - { path: ^/admin, roles: ROLE_ADMIN }
-        - { path: ^/profile, roles: ROLE_USER }
+         - { path: ^/admin, roles: ROLE_ADMIN } #seule un ROLE_ADMIN peut aller sur la route /admin
+        # - { path: ^/profile, roles: ROLE_USER }

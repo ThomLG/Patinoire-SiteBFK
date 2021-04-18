@@ -28,7 +28,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
 
     private $entityManager;
     private $urlGenerator;
-    private $csrfTokenManager;
+    private $csrfTokenManager; // le token récupère l'ID de l'USER
     private $passwordEncoder;
 
     public function __construct(EntityManagerInterface $entityManager, UrlGeneratorInterface $urlGenerator, CsrfTokenManagerInterface $csrfTokenManager, UserPasswordEncoderInterface $passwordEncoder)
@@ -67,10 +67,10 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
             throw new InvalidCsrfTokenException();
         }
 
-        $user = $this->entityManager->getRepository(User::class)->findOneBy(['email' => $credentials['email']]);
+        $user = $this->entityManager->getRepository(User::class)->findOneBy(['email' => $credentials['email']]); // vérification de l'email
 
         if (!$user) {
-            // message d'erreur d'authentification-important de ne pas préciser trop l'erreur
+            // message d'erreur d'authentification-important de ne pas préciser trop l'erreur en cas de personnes malveillantes
             throw new CustomUserMessageAuthenticationException('Email ou mot de passe incorrects !');
         }
 
@@ -79,7 +79,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
 
     public function checkCredentials($credentials, UserInterface $user)
     {
-        return $this->passwordEncoder->isPasswordValid($user, $credentials['password']);
+        return $this->passwordEncoder->isPasswordValid($user, $credentials['password']);//vérification du mot de passe
     }
 
     /**
@@ -89,6 +89,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
     {
         return $credentials['password'];
     }
+
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, string $providerKey)
     {

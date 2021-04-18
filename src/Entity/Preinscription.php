@@ -20,11 +20,17 @@ class Preinscription
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Regex(
+     *     pattern="/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u",
+     *     message="Your name cannot contain a number")
      */
     private $preInscriptionLastName;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Regex(
+     *     pattern="/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u",
+     *     message="Your name cannot contain a number")
      */
     private $preInscriptionFirstName;
 
@@ -37,12 +43,13 @@ class Preinscription
      * @ORM\Column(type="string", length=255)
      * @Assert\Email(message="Veuillez entrer une adresse e-mail valide")
      */
-    private $preInscriptionEmail;
-
-    /**
-     * @ORM\Column(type="string", length=10)
-     * @Assert\Regex(pattern="/[0-9]{10}/", message="Veuillez entrer un numéro de téléphone valide")
-     */
+    /* Assert/email permet de préciser à l'utilisateur de saisir un email correct*/
+   private $preInscriptionEmail;
+   /**
+    * @ORM\Column(type="string", length=10)
+    * @Assert\Regex(pattern="/[0-9]{10}/", message="Veuillez entrer un numéro de téléphone valide")
+    */
+    /* Assert/Regex permet de n'accepter que les nombres et max 10 caractères*/
     private $preInscriptionPhoneNumber;
 
     /**

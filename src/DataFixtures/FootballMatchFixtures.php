@@ -22,6 +22,7 @@ class FootballMatchFixtures extends Fixture
 
         $manager->persist($match1);
         $manager->flush();
+
     }
 
 }

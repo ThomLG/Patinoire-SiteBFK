@@ -36,7 +36,6 @@ class UserFixtures extends Fixture
         $password=$this->encoder->encodePassword($user1, "coach35");
         $user1->setPassword($password);
         $manager->persist($user1);
-
         $manager->flush();
     }
 }

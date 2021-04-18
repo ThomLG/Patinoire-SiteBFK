@@ -1,10 +1,13 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~font-awesome/scss/font-awesome";
+@import "header/header.scss";
+@import "partners/partners.scss";
+@import "footer/footer.scss";
 
 //Développé en Mobile first
 
 body {
-  background-color: #0055aa;
+  background-color: white;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -13,64 +16,13 @@ body {
 
 .main {
   flex: 1;
-  background-color: yellowgreen;
-  width: 100%;
-}
-
-//------------------------------------------Mise en page du Header---------------------------------------------
-.header {
-  width: 100%;
-}
-
-.siteTitle {
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  margin: 5px 5px auto;
-
-  .clubLogoHeader {
-    margin: 0 auto;
-    height: 120px;
-    width: 120px;
-  }
-
-  .siteTitleText h1 {
-    color: black;
-    font-family: Rambla;
-    font-size: 28pt;
-    font-weight: bolder;
-    text-align: center;
-    text-transform: uppercase;
-  }
-}
-
-.bfkNavbar {
-  background-color: mediumaquamarine;
   width: 100%;
-
-  a {
-    color: black !important;
-    font-family: Poppins;
-    text-transform: uppercase;
-  }
-
-  a:hover {
-    background-color: #0000cc;
-  }
-
-  .dropdown-menu {
-    background-color: purple;
-  }
-}
-
-.connectionContainer{
-  background-color: #0f6674;
-  margin: 5px;
 }
 
 //------------------------------------Mise en page de la page d'accueil------------------------------------------------
 .content {
-  background-color: #00bb00;
+  background-color: white;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -80,7 +32,7 @@ body {
 
 .nextMatch {
   background-color: black;
-  border: solid red 2px;
+  border: solid #ff0000 2px;
   color: white;
   margin: 5px;
 }
@@ -101,17 +53,15 @@ body {
   width: 100%;
 }
 
-
 .lastMatch img {
-  border: solid red 1px;
+  border: solid #ff0000 1px;
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
 }
 
-
 .sidebar {
-  background-color: orange;
+  background-color: white;
   width: 100%;
 }
 
@@ -123,7 +73,7 @@ body {
 }
 
 .sidebar .container {
-  background-color: yellow;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -131,19 +81,19 @@ body {
 
 .lastNews {
   background-color: white;
-  border: solid red 2px;
+  border: solid #ff0000 2px;
   margin: 5px;
 }
 
 .team-rank {
   background-color: white;
-  border: solid red 2px;
+  border: solid #ff0000 2px;
   margin: 5px;
 }
 
 //------------------------------------------Mise en page infrastructures------------------------------
 .stadiumContent {
-  background-color: #00bb00;
+  background-color: white;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -155,58 +105,6 @@ body {
 .stadiumCard {
   margin: 4px auto;
   width: 18rem;
-}
-
-//----------------------------Mise en page partenaires--------------------------------------------------
-.partnerContent {
-  background-color: black;
-  border-top: solid red 1px;
-  list-style-type: none;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: center;
-  justify-content: space-evenly;
-
-  img {
-    height: 120px;
-    width: 200px;
-    padding: 10px;
-    object-fit: contain
-  }
-}
-
-.partnerCardContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .partnerCard {
-    margin: 5px;
-  }
-  .partnerCardBody{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .partnerCardTitle{
-    text-align: center;
-  }
-  .partnerCardBtn{
-    background-color: #1b1e21;
-    border: solid 2px red;
-  }
-}
-
-
-//--------------------------------------------FOOTER---------------------------------------------------------
-
-.footerContainer {
-  background-color: black;
-  color: white;
-  text-align: center;
-  width: 100%;
 }
 
 
@@ -236,7 +134,6 @@ body {
     }
 
     .historyClubPictureContainer {
-      background-color: yellow;
       margin: 0 0 auto;
       position: relative;
       width: 100%;
@@ -257,7 +154,7 @@ body {
       }
 
       .historyClubPicture {
-        border: solid red 1px;
+        border: solid #ff0000 1px;
         margin: 0 0 auto;
         max-height: 100%;
         max-width: 100%;
@@ -270,11 +167,14 @@ body {
 //-----------------------------Tableau résultat---------------------------------------------------
 
 .tableMatch {
-  background-color: yellow;
+  background-color: white;
   font-size: 8pt;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 5px 5px 5px 5px;
+  tr{
+    border: solid black 1px;
+  }
   td{
     background-color: white;
   }
@@ -286,67 +186,46 @@ body {
   text-align: center;
 }
 
+
+//-----------------------------Page Joueurs--------------------------------------------------------------
+.playerContent {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.playerCard{
+  margin: 4px auto;
+  width: 18rem;
+}
+.playerCardBody{
+  margin: 5px;
+}
+
+.playerCardBody .card-title{
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+
 //------------------------ à partir de 768 px et plus, il passe en flex-direction row----------------------------
 @media screen and (min-width: 768px) {
-  .header h1 {
-    font-size: 35pt;
-  }
 
-  //Mise en forme menu
-  .bfkNavbar .bfkNavbarContent {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
-  .bfkNavbar a {
-    font-size: 16pt;
-  }
-
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  .dropdown-item {
-    &:hover {
-      display: block;
-    }
-  }
-
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    z-index: 1;
-  }
-
-  .connectionContainer {
-    background-color: white;
-    float: right;
-    text-align: center;
-    height: 30px;
-    width: 200px;
-  }
-
-    .connectionContainerConnected {
-      background-color: white;
-      float: right;
-      text-align: center;
-      height: 150px;
-      width: 200px;
-    }
-
-  //-------------------------------------------------------------------------------------------------------------
-
+//---------------page d'accueil----------------------------------------------------------------------
   .content {
-    background-color: #00bb00;
     flex-direction: row;
     width: 100%;
   }
+
   .nextMatch {
     background-color: black;
-    border: solid red 2px;
+    border: solid #ff0000 2px;
     color: white;
     margin: 10px;
   }
@@ -382,43 +261,15 @@ body {
 
   .lastNews {
     background-color: white;
-    border: solid red 2px;
+    border: solid #ff0000 2px;
     margin: 10px;
   }
 
   .team-rank {
     background-color: white;
-    border: solid red 2px;
+    border: solid #ff0000 2px;
     margin: 10px;
   }
-  //---------------------------------Mise en page partenaires---------------------------------------------
-  .partnerContent {
-    flex-direction: row;
-    width: 100%;
-  }
-
-  .partnerContent img {
-    height: 120px;
-    width: 200px;
-    object-fit: contain;
-    padding: 10px;
-  }
-
-  .partnerCardContent {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: center;
-    justify-content: center;
-
-    .partnerCard {
-      margin: 5px;
-      display: flex;
-      justify-content: center;
-    }
-  }
-
 
   //------------------------------------------Mise en page infrastructures------------------------------
 
@@ -435,14 +286,28 @@ body {
     margin: 4px;
     width: 26rem;
   }
-  //-------------------------Mise en page des titres des pages-------------------------------------------------------
-
-
-  //-----------------------------------------------------------------------------------------------------
-  .footerContainer {
+  //-----------------------------Page Joueurs--------------------------------------------------------------
+  .playerContent {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px;
     width: 100%;
   }
 
+  .playerCard{
+    width: 18rem;
+  }
+  .playerCardBody{
+    margin: 5px;
+  }
 
+  .playerCardBody .card-title{
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
 

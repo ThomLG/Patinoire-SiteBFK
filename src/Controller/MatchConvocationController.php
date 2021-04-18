@@ -18,18 +18,18 @@ class MatchConvocationController extends AbstractController
      */
     public function index(Request $request): Response
     {
-        $convocation=new MatchConvocation();
-        $form=$this->createForm(MatchConvocationType::class, $convocation);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) { // vérifie les données du formulaire et si elles sont valides
-            $convocation = $form->getData(); //récupérer les données du formulaire et les mettre dans l'objet $comment
+        $convocation=new MatchConvocation(); // Création d'une nouvelle instance pour l'entité MatchConvocation
+        $form=$this->createForm(MatchConvocationType::class, $convocation);// Lié à la classe MatchConvocationType
+        $form->handleRequest($request); // je récupère les données
+        if ($form->isSubmitted() && $form->isValid()) { // vérifie si le formulaire a été soumis et si les données sont valides
+            $convocation = $form->getData(); //récupérer les données du formulaire et les mettre dans l'objet $convocation
             //enregistrement en bdd
             $em = $this->getDoctrine()->getManager();
-            $em->persist($convocation);
-            $em->flush();}
+            $em->persist($convocation);// annonce à doctrine qu'il faut enregistrer $convocation
+            $em->flush();} //envoi dans la bdd
 
         return $this->render('match_convocation/index.html.twig', [
-            'matchConvocationForm' => $form->createView(),
+            'matchConvocationForm' => $form->createView(),// j'envoie le formulaire à la vue
         ]);
     }
 
