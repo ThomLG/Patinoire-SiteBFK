@@ -8,6 +8,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\ArrayField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 
@@ -26,7 +27,8 @@ class UserCrudController extends AbstractCrudController
             ArrayField::new('roles'),
             TextField::new('function', 'Fonction'),
             TextField::new('firstName','Prénom'),
-            TextField::new('lastName', 'Nom')
+            TextField::new('lastName', 'Nom'),
+            ImageField::new('photoUser','Photo dirigeant')->setUploadDir('public/uploads/players_photos'),
         ];
     }
 

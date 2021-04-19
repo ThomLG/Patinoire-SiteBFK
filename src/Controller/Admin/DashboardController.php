@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Category;
 use App\Entity\FootballMatch;
 use App\Entity\HistoryClub;
 use App\Entity\MatchConvocation;
@@ -49,6 +50,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Partenaires','iconclass',Partner::class);//ajout du CRUD de l'entité Partner dans le menu du dashboard easyadmin
         yield MenuItem::linkToCrud('Convocations','iconclass',MatchConvocation::class);//ajout du CRUD de l'entité  MatchConvocation dans le menu du dashboard easyadmin
         yield MenuItem::linkToCrud('Préinscriptions','iconclass',Preinscription::class);//ajout du CRUD de l'entité Preinscription dans le menu du dashboard easyadmin
+        yield MenuItem::linkToCrud('Catégories', 'iconclass', Category::class);
         yield MenuItem::linkToRoute('Retour au site','fa fa-home','homepage');// ajout d'un lien de redirection vers la page d'accueil du site web
     }
 

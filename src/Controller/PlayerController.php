@@ -27,13 +27,22 @@ class PlayerController extends AbstractController
     /**
      * @Route("/feminines", name="feminines")
      */
-    public function showFeminines(PlayerRepository $playerRepository, CategoryRepository $categoryRepository, PartnerRepository $partnerRepository): Response{
+    public function showFeminines(PlayerRepository $playerRepository, CategoryRepository $categoryRepository): Response{
         $category=$categoryRepository->findOneBy(['categoryName'=>'Féminines']);
         $players=$playerRepository->findPlayerByCategory('Féminines');
-        $partners=$partnerRepository->findAll();
         return $this->render('player/index.html.twig', [
             'players'=>$players,
-            'partners'=>$partners,
+            'category'=>$category
+        ]);
+    }
+    /**
+     * @Route("/jeunes", name="jeunes")
+     */
+    public function showJeunes(PlayerRepository $playerRepository, CategoryRepository $categoryRepository): Response{
+        $category=$categoryRepository->findOneBy(['categoryName'=>'Jeunes']);
+        $players=$playerRepository->findPlayerByCategory('Jeunes');
+        return $this->render('player/index.html.twig', [
+            'players'=>$players,
             'category'=>$category
         ]);
     }

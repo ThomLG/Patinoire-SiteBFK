@@ -51,6 +51,11 @@ class User implements UserInterface
      */
     private $function;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $photoUser;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -164,6 +169,18 @@ class User implements UserInterface
     public function setFunction(string $function): self
     {
         $this->function = $function;
+
+        return $this;
+    }
+
+    public function getPhotoUser(): ?string
+    {
+        return $this->photoUser;
+    }
+
+    public function setPhotoUser(?string $photoUser): self
+    {
+        $this->photoUser = $photoUser;
 
         return $this;
     }

@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+
+{% block title %} Staff Sportif | Site Officiel du Breizh Fobal Klub{% endblock %}
+
+{% block content %}
+    <div class="main">
+        <h1 class="titlePage">Staff Sportif</h1>
+        <div class="playerContent">
+            {% for coach in coaches %}
+                <section class="playerCard card">
+                    <img class="card-img-top" src="{{ asset('uploads/players_photos/' ~ coach.photoUser) }}"
+                         alt="mm">
+                    <div class="playerCardBody card-body">
+                        <h3 class="card-title">{{ coach.firstName }} {{ coach.lastName }}</h3>
+                        <p class="card-text">Fonction : {{ coach.function }}</p>
+                    </div>
+                </section>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

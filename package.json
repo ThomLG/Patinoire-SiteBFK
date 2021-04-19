@@ -1,24 +1,26 @@
 {
     "devDependencies": {
-        "autoprefixer": "^10.2.5",
-        "clean-css-cli": "^4.3.0",
-        "postcss-cli": "^7.1.2",
-        "rimraf": "^3.0.2",
-        "postcss-loader": "^5.2.0",
         "@symfony/stimulus-bridge": "^2.0.0",
         "@symfony/webpack-encore": "^1.0.0",
+        "autoprefixer": "^10.2.5",
+        "clean-css-cli": "^4.3.0",
         "core-js": "^3.0.0",
+        "postcss-cli": "^8.3.1",
+        "postcss-loader": "^5.2.0",
         "regenerator-runtime": "^0.13.2",
+        "rimraf": "^3.0.2",
         "stimulus": "^2.0.0",
         "webpack-notifier": "^1.6.0"
     },
     "license": "UNLICENSED",
     "private": true,
     "scripts": {
+        "build-cleancss": "cleancss -o assets/styles/app.scss assets/styles/app.scss",
         "dev-server": "encore dev-server",
         "dev": "encore dev",
         "watch": "encore dev --watch",
-        "build": "encore production --progress"
+        "build": "encore production --progress",
+        "build-autoprefix": "postcss --use autoprefixer --map false --output assets/styles/app.scss assets/styles/app.scss"
     },
     "dependencies": {
         "autoprefixer": "^10.2.5",
