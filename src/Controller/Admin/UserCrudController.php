@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\User;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ArrayField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
@@ -10,6 +11,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Form\Type\FileUploadType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 
 class UserCrudController extends AbstractCrudController
@@ -19,17 +21,31 @@ class UserCrudController extends AbstractCrudController
         return User::class ;
     }
 
-    public function configureFields(string $pageName): iterable
+    public function configureCrud(Crud $crud): Crud
     {
-        return [
-            EmailField::new('email','E-mail'),
-            TextField::new('password','Mot de passe'),
-            ArrayField::new('roles'),
-            TextField::new('function', 'Fonction'),
-            TextField::new('firstName','Prénom'),
-            TextField::new('lastName', 'Nom'),
-            ImageField::new('photoUser','Photo dirigeant')->setUploadDir('public/uploads/players_photos'),
-        ];
+        return $crud
+            ->setPageTitle('index','Dirigeants');
     }
 
+    public function configureFields(string $pageName): iterable
+    {
+            $out =[EmailField::new('email','E-mail')];
+
+            //modification
+            if ($pageName !=='index') {
+                $out[] = TextField::new('plainPassword')
+                    ->setLabel('Mot de passe')
+                    ->setFormType(PasswordType::class)
+                    ->setRequired($pageName === 'new');
+            }
+
+            return array_merge($out,[
+            ArrayField::new('roles','Rôle'),
+            TextField::new('function', 'Fonction'),
+            TextField::new('firstName', 'Prénom'),
+            TextField::new('lastName', 'Nom'),
+            ImageField::new('photoUser', 'Photo dirigeant')
+                ->setUploadDir('public/uploads/players_photos')
+            ]);
+    }
 }

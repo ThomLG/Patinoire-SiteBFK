@@ -85,6 +85,18 @@ body {
   margin: 5px;
 }
 
+.noveltyTitleList{
+  list-style-type: none;
+}
+
+.noveltyTitle{
+  color: black;
+}
+
+.noveltyTitle:hover{
+  color: black;
+}
+
 .team-rank {
   background-color: white;
   border: solid #ff0000 2px;
@@ -308,6 +320,12 @@ body {
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
+  }
+
+  .map{
+    background-color:red;
+    height: 480px;
+    width: 500px;
   }
 }
 

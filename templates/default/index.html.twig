@@ -7,7 +7,9 @@
     <div class="main">
         <div class="content">
             <div class="container">
-                <div class="nextMatch">Futur match date</div>
+                {% for nextFootballMatch in nextFootballMatches %}
+                <div class="nextMatch">{{ nextFootballMatch.footballMatchDate|format_datetime('full','short', locale='fr') }} - {{ nextFootballMatch.footballMatchLocation }} : {{ nextFootballMatch.bfkTeam}}-{{ nextFootballMatch.bfkTeamOpponent}}</div>
+                {% endfor %}
                 <section class="lastMatch">
                     {% for matcharticle in matcharticles %}
                         <img src="{{ asset('uploads/photo_matches/' ~ matcharticle.mathPhoto) }}"
@@ -24,9 +26,9 @@
                         <h3>Dernières infos</h3>
                         {% for novelty in novelties %}
                             <ul>
-                                <li>{{ novelty.noveltyTitle }}</li>
+                                <li class="noveltyTitleList"><a class="noveltyTitle" href="{{ path('novelty_id',{'id': novelty.id}) }}">{{ novelty.noveltyDate|date('d/m') }} : {{ novelty.noveltyTitle }}</a></li>
                             </ul>
-                        {% endfor %}
+                            {% endfor %}
                     </section>
                     <section class="team-rank">
                         <h3>Classement</h3>

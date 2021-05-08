@@ -19,4 +19,16 @@ class MatchArticleController extends AbstractController
             'matcharticles'=>$matcharticles
         ]);
     }
+
+    /**
+     * @Route ("/matches/{id}", name="match_id")
+     */
+    public function show(int $id, MatchArticleRepository $matchArticleRepository):Response
+    {
+        $matchId=$matchArticleRepository->find($id);
+        return $this->render('match_article/show.html.twig',[
+                'matchId'=>$matchId
+            ]
+        );
+    }
 }

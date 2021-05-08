@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class NoveltyController extends AbstractController
 {
     /**
-     * @Route("/novelty", name="novelty")
+     * @Route("/informations", name="novelty")
      */
     public function index(NoveltyRepository $noveltyRepository): Response
     {
@@ -18,5 +18,17 @@ class NoveltyController extends AbstractController
         return $this->render('novelty/index.html.twig', [
             'novelties' => $novelties,
         ]);
+    }
+
+    /**
+     * @Route ("/informations/{id}", name="novelty_id")
+     */
+    public function show(int $id, NoveltyRepository $noveltyRepository):Response
+    {
+        $noveltyId=$noveltyRepository->find($id);
+        return $this->render('novelty/show.html.twig',[
+            'noveltyId'=>$noveltyId
+            ]
+        );
     }
 }

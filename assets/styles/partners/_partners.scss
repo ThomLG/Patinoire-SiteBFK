@@ -28,16 +28,15 @@
     margin: 5px;
   }
   .partnerCardBody{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
   }
-  .partnerCardTitle{
-    text-align: center;
-  }
-  .partnerCardBtn{
-    background-color: #1b1e21;
-    border: solid #ff0000 2px;
+  .partnerCardButtonContent {
+    .partnerCardBtn {
+      background-color: #1b1e21;
+      border: solid #ff0000 2px;
+      display: block;
+      margin: 10px;
+    }
   }
 }
 
@@ -56,12 +55,6 @@
   }
 
   .partnerCardContent {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: center;
-    justify-content: center;
 
     .partnerCard {
       margin: 5px;
@@ -70,7 +63,6 @@
     }
   }
 }
-
 
 @media screen and (min-width: 1200px) {
   .partnerContent {
@@ -90,13 +82,32 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    align-content: center;
-    justify-content: center;
 
     .partnerCard {
-      margin: 5px;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      margin: 5px;
+      height: 550px;
+      width: 280px;
     }
+    .partnerCardImg{
+      display: block;
+      height: 100px;
+      width: 250px;
+      object-fit: contain;
+      margin-left: auto;
+      margin-top: 10px;
+      margin-right: auto;
+    }
+    .partnerCardBody{
+      background-color: red;
+    }
+    .partnerCardButtonContent{
+      .partnerCardBtn{
+        display: block;
+        margin:15px;
+      }
+    }
+
   }
 }

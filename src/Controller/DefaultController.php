@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\FootballMatchRepository;
 use App\Repository\MatchArticleRepository;
 use App\Repository\NoveltyRepository;
 use App\Repository\PartnerRepository;
@@ -15,13 +16,16 @@ class DefaultController extends AbstractController
     /**
      * @Route("/", name="homepage", methods={"GET|POST"})
      */
-    public function index(NoveltyRepository $noveltyRepository, MatchArticleRepository $matchArticleRepository): Response
+    public function index(FootballMatchRepository $footballMatchRepository, NoveltyRepository $noveltyRepository, MatchArticleRepository $matchArticleRepository): Response
     {
+        //afficher le futur match
+        $nextFootballMatches=$footballMatchRepository->findBy([],["footballMatchDate"=>"DESC"], 1);
         //afficher le dernier match par ordre chronologique décroissant
         $matcharticles=$matchArticleRepository->findBy([],["date"=>"DESC"], 1); // on filtre par date décroissante
         //afficher la liste des nouveautés
         $novelties=$noveltyRepository->findBy([], ['noveltyDate'=>"DESC"],5);// on filtre par date décroisssante les novelties et on les limite à 5
         return $this->render('default/index.html.twig', [
+            'nextFootballMatches'=>$nextFootballMatches,
             'matcharticles'=>$matcharticles,
             'novelties'=>$novelties
         ]);
