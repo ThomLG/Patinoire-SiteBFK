@@ -7,6 +7,9 @@
     <link rel="shortcut icon" href="{{ asset('icons/logo_club.ico') }}" type="image/x-icon"/>
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+              integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+              crossorigin=""/>
     {% endblock %}
 </head>
 <body>
@@ -72,7 +75,7 @@
                         Equipes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Staff Sportif</a>
+                        <a class="dropdown-item" href="{{ path('staff') }}">Staff Sportif</a>
                         <a class="dropdown-item" href="{{ path('seniors') }}">Seniors</a>
                         <a class="dropdown-item" href="{{ path('feminines') }}">Féminines</a>
                         <a class="dropdown-item" href="{{ path('jeunes') }}">Jeunes</a>
@@ -132,6 +135,10 @@
 </footer>
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin="">
+    </script>
 {% endblock %}
 </body>
 </html>

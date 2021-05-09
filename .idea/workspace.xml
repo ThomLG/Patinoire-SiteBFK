@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b51db68-9bfb-4284-bc2c-0794c52de261" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/partners/_partners.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/partners/_partners.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MatchArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MatchArticleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/NoveltyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/NoveltyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventSubscriber/EasyAdminSubscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventSubscriber/EasyAdminSubscriber.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/partner/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partner/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/stadium/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stadium/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +23,7 @@
         <option value="SCSS File" />
         <option value="Twig" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -177,6 +171,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Thomas Le Gloux\Documents\digital_campus\dc_dev5\patinoire\Codage\BFKSiteWeb\assets" />
+      <recent name="C:\Users\Thomas Le Gloux\Documents\digital_campus\dc_dev5\patinoire\Codage\BFKSiteWeb\assets\controllers" />
       <recent name="C:\Users\Thomas Le Gloux\Documents\digital_campus\dc_dev5\patinoire\Codage\BFKSiteWeb\assets\styles\header" />
       <recent name="C:\Users\Thomas Le Gloux\Documents\digital_campus\dc_dev5\patinoire\Codage\BFKSiteWeb\assets\styles\navbar" />
     </key>
@@ -209,6 +205,7 @@
       <workItem from="1618816361688" duration="2260000" />
       <workItem from="1618818743306" duration="8327000" />
       <workItem from="1620500382922" duration="688000" />
+      <workItem from="1620559855177" duration="4105000" />
     </task>
     <servers />
   </component>
