@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20210409084550 extends AbstractMigration
+final class Version20210511074816 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -20,12 +20,12 @@ final class Version20210409084550 extends AbstractMigration
     public function up(Schema $schema) : void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE partner ADD partner_site_link VARCHAR(255) DEFAULT NULL');
+        $this->addSql('ALTER TABLE stadium CHANGE stadium_longitude stadium_longitude VARCHAR(255) NOT NULL, CHANGE stadium_latitude stadium_latitude VARCHAR(255) NOT NULL');
     }
 
     public function down(Schema $schema) : void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE partner DROP partner_site_link');
+        $this->addSql('ALTER TABLE stadium CHANGE stadium_longitude stadium_longitude DOUBLE PRECISION NOT NULL, CHANGE stadium_latitude stadium_latitude DOUBLE PRECISION NOT NULL');
     }
 }

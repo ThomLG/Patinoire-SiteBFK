@@ -5,17 +5,17 @@
     <div class="main">
         <h1 class="titlePage">Les Infrastructures du Club</h1>
         <div class="stadiumContent">
-                {% for stadium in stadiums %}
-                    <section class="stadiumCard card">
-                        <img class="card-img-top" src="{{ asset('uploads/infrastructures/' ~ stadium.stadiumPhoto) }}"
-                             alt="{{ stadium.stadiumName }}">
-                        <div class="card-body">
-                            <h3 class="card-title">{{ stadium.stadiumName }}</h3>
-                            <p class="card-text"> Adresse : {{ stadium.stadiumAdress }}</p>
-                            <p class="card-text">{{ stadium.stadiumCity }}</p>
-                        </div>
-                    </section>
-                {% endfor %}
+            {% for stadium in stadiums %}
+                <section class="stadiumCard card">
+                    {#  <img class="card-img-top" src="{{ asset('uploads/infrastructures/' ~ stadium.stadiumPhoto) }}"#}
+                         alt="{{ stadium.name }}">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ stadium.name }}</h3>
+                        <p class="card-text"> Adresse : {{ stadium.stadiumAdress }}</p>
+                        <p class="card-text">{{ stadium.stadiumCity }}</p>
+                    </div>
+                </section>
+            {% endfor %}
             Les entrainements ont lieu le lundi, le mercredi au Stade du Berry de 20h à 22h et le vendredi au Stade Charles Géniaux de 20h à 22h.
             Les matches à domicile ont lieu au Stade Paul Lafargue
         </div>

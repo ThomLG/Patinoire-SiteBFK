@@ -20,7 +20,7 @@ class Stadium
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $stadiumName;
+    private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -30,26 +30,36 @@ class Stadium
     /**
      * @ORM\Column(type="string", length=255)
      */
+    private $stadiumPostalCode;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
     private $stadiumCity;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="decimal", precision=10, scale=8)
      */
-    private $stadium_photo;
+    private $longitude;
+
+    /**
+     * @ORM\Column(type="decimal", precision=10, scale=8)
+     */
+    private $latitude;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getStadiumName(): ?string
+    public function getName(): ?string
     {
-        return $this->stadiumName;
+        return $this->name;
     }
 
-    public function setStadiumName(string $stadiumName): self
+    public function setName(string $name): self
     {
-        $this->stadiumName = $stadiumName;
+        $this->name = $name;
 
         return $this;
     }
@@ -66,6 +76,18 @@ class Stadium
         return $this;
     }
 
+    public function getStadiumPostalCode(): ?string
+    {
+        return $this->stadiumPostalCode;
+    }
+
+    public function setStadiumPostalCode(string $stadiumPostalCode): self
+    {
+        $this->stadiumPostalCode = $stadiumPostalCode;
+
+        return $this;
+    }
+
     public function getStadiumCity(): ?string
     {
         return $this->stadiumCity;
@@ -78,14 +100,26 @@ class Stadium
         return $this;
     }
 
-    public function getStadiumPhoto(): ?string
+    public function getLongitude(): ?string
     {
-        return $this->stadium_photo;
+        return $this->longitude;
     }
 
-    public function setStadiumPhoto(?string $stadium_photo): self
+    public function setLongitude(string $longitude): self
     {
-        $this->stadium_photo = $stadium_photo;
+        $this->longitude = $longitude;
+
+        return $this;
+    }
+
+    public function getLatitude(): ?string
+    {
+        return $this->latitude;
+    }
+
+    public function setLatitude(string $latitude): self
+    {
+        $this->latitude = $latitude;
 
         return $this;
     }

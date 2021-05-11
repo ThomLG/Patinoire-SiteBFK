@@ -298,6 +298,12 @@ body {
     margin: 4px;
     width: 26rem;
   }
+
+  #map{
+    background-color:red;
+    height: 480px;
+    width: 500px;
+  }
   //-----------------------------Page Joueurs--------------------------------------------------------------
   .playerContent {
     display: flex;
@@ -322,10 +328,5 @@ body {
     text-transform: uppercase;
   }
 
-  .map{
-    background-color:red;
-    height: 480px;
-    width: 500px;
-  }
 }
 

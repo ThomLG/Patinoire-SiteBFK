@@ -44,9 +44,9 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Utilisateurs', 'icon class', User::class); //ajout du CRDUD gestion de l'entité User dans le menu du dashboard easyadmin
         yield MenuItem::linkToCrud('News', 'icon class', Novelty::class); //ajout du CRUD gestion de l'entité Novelty dans le menu du dashboard easyadmin
         yield MenuItem::linkToCrud('Matches', 'icon class', FootballMatch::class); //ajout du CRUD de l'entité FootballMatch dans le menu du dashboard easyadmin
-        yield MenuItem::linkToCrud('Infrastructures', 'icon class', Stadium::class);//ajout du CRUD de l'entité Stadium dans le menu du dashboard easyadmin
         yield MenuItem::linkToCrud('Joueurs','iconclass',Player::class);//ajout du CRUD de l'entité Stadium stades dans le menu du dashboard easyadmin
-        yield MenuItem::linkToCrud('Histoire du club','iconclass',HistoryClub::class);//ajout du CRUD de l'entité Stadium stades dans le menu du dashboard easyadmin
+        yield MenuItem::linkToCrud('Histoire du club','iconclass',HistoryClub::class);//ajout du CRUD de l'entité historyclub dans le menu du dashboard easyadmin
+        yield MenuItem::linkToCrud('Infrastructures','iconclass',Stadium::class);//ajout du CRUD de l'entité Stadium stades dans le menu du dashboard easyadmin
         yield MenuItem::linkToCrud('Partenaires','iconclass',Partner::class);//ajout du CRUD de l'entité Partner dans le menu du dashboard easyadmin
         yield MenuItem::linkToCrud('Convocations','iconclass',MatchConvocation::class);//ajout du CRUD de l'entité  MatchConvocation dans le menu du dashboard easyadmin
         yield MenuItem::linkToCrud('Préinscriptions','iconclass',Preinscription::class);//ajout du CRUD de l'entité Preinscription dans le menu du dashboard easyadmin

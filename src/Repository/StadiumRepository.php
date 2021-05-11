@@ -47,4 +47,17 @@ class StadiumRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    /**
+     * Retourne la liste des stades pour l'API
+     * @return array
+     */
+    public function apiFindAll(): array
+    {
+        $qb = $this->createQueryBuilder('std')
+            ->select('std.id', 'std.name', 'std.stadiumAdress','std.stadiumPostalCode', 'std.stadiumCity','std.latitude', 'std.longitude')
+            ->orderBy('std.name', 'ASC');
+        $query = $qb->getQuery();
+        return $query->execute();
+    }
 }
