@@ -1,6 +1,6 @@
 // initialize the map on the "map" div with a given center and zoom
 
-const map = L.map('map').setView([48.117266, -1.6777926], 15);
+const map = L.map('map').setView([48.117266, -1.6777926], 13);
 
 L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
     {
@@ -16,16 +16,18 @@ xmlhttp.onreadystatechange = () => {
             let data = JSON.parse(xmlhttp.responseText);
             Object.entries(data).forEach(stadium => {
                     //personnalisation des marqueurs (image, taille, etc.)
-                    let myMarker = L.icon({
-                        iconUrl:"uploads/logo_club/logo_club.png",
-                        iconSize: [33, 44],
-                        iconAnchor: [16, 44],
-                        popupAnchor: [0, -35]
+                    let myMarker = L.popup({
                     });
                     //affichage des pop-up
                     let marker = L.marker([stadium[1].latitude, stadium[1].longitude],
-                        {icon: myMarker}).addTo(map);
-                    marker.bindPopup("<p>"+stadium[1].name+"</p>").openPopup();
+                        {
+                            popup: myMarker,
+                        }).addTo(map);
+                    marker.bindPopup("<p>"+stadium[1].name+"</p>",{
+                        closeButton:false,
+                        closeOnClick: false,
+                        closeOnEscapeKey:false,
+                });
                 });
         } else {
             console.log(xmlhttp.statusText);

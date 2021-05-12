@@ -2,32 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b51db68-9bfb-4284-bc2c-0794c52de261" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/BFKSiteWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BFKSiteWeb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210405174518.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210407073908.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210407095747.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210407102042.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210407131544.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210408141305.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210409084550.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210419101557.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/StadiumCrudController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/StadiumController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/StadiumFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Stadium.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/StadiumRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/stadium/index.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,6 +222,7 @@
       <workItem from="1620727156700" duration="7738000" />
       <workItem from="1620739545946" duration="8305000" />
       <workItem from="1620751458947" duration="2565000" />
+      <workItem from="1620807825786" duration="4535000" />
     </task>
     <servers />
   </component>
