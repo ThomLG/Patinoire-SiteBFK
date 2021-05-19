@@ -6,6 +6,7 @@ use App\Repository\FootballMatchRepository;
 use App\Repository\MatchArticleRepository;
 use App\Repository\NoveltyRepository;
 use App\Repository\PartnerRepository;
+use App\Repository\SocialNetworksRepository;
 use Psr\Container\ContainerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,7 +17,7 @@ class DefaultController extends AbstractController
     /**
      * @Route("/", name="homepage", methods={"GET|POST"})
      */
-    public function index(FootballMatchRepository $footballMatchRepository, NoveltyRepository $noveltyRepository, MatchArticleRepository $matchArticleRepository): Response
+    public function index(FootballMatchRepository $footballMatchRepository, NoveltyRepository $noveltyRepository, MatchArticleRepository $matchArticleRepository, SocialNetworksRepository $socialNetworksRepository): Response
     {
         //afficher le futur match
         $nextFootballMatches=$footballMatchRepository->findBy([],["footballMatchDate"=>"DESC"], 1);
@@ -27,7 +28,7 @@ class DefaultController extends AbstractController
         return $this->render('default/index.html.twig', [
             'nextFootballMatches'=>$nextFootballMatches,
             'matcharticles'=>$matcharticles,
-            'novelties'=>$novelties
+            'novelties'=>$novelties,
         ]);
     }
 }

@@ -103,6 +103,33 @@ body {
   margin: 5px;
 }
 
+.socialNetworkContainer{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+
+.socialNetworkTitle{
+  font-size: 20px;
+  text-align: center;
+}
+.socialNetworkLinkContainer{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.socialNetworkLink{
+  color: black;
+  margin: 5px;
+}
+
+.socialNetworkLink:hover{
+  color: dimgrey;
+  text-decoration: none;
+}
+
 //------------------------------------------Mise en page infrastructures------------------------------
 .stadiumContent {
   background-color: white;
@@ -119,6 +146,22 @@ body {
   width: 18rem;
 }
 
+#map {
+  background-color: darkgrey;
+  height: 280px;
+  max-width: 100%;
+  margin: 5px;
+}
+
+.leaflet-popup p{
+  font-family: Poppins;
+  font-weight: bold;
+}
+
+.leaflet-marker-icon{
+  background-color: red;
+  color:#343a40;
+}
 
 //-------------------------Mise en page des titres des pages-------------------------------------------------------
 

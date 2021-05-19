@@ -5,6 +5,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/stadium/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stadium/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +27,8 @@
       <list>
         <option value="SCSS File" />
         <option value="Twig" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -175,6 +182,7 @@
       <recent name="C:\Users\Thomas Le Gloux\Documents\digital_campus\dc_dev5\patinoire\Codage\BFKSiteWeb\migrations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Thomas Le Gloux\Documents\digital_campus\dc_dev5\patinoire\Codage\BFKSiteWeb\templates\social_network" />
       <recent name="C:\Users\Thomas Le Gloux\Documents\digital_campus\dc_dev5\patinoire\Codage\BFKSiteWeb\assets" />
       <recent name="C:\Users\Thomas Le Gloux\Documents\digital_campus\dc_dev5\patinoire\Codage\BFKSiteWeb\assets\controllers" />
       <recent name="C:\Users\Thomas Le Gloux\Documents\digital_campus\dc_dev5\patinoire\Codage\BFKSiteWeb\assets\styles\header" />
@@ -222,7 +230,13 @@
       <workItem from="1620727156700" duration="7738000" />
       <workItem from="1620739545946" duration="8305000" />
       <workItem from="1620751458947" duration="2565000" />
-      <workItem from="1620807825786" duration="4535000" />
+      <workItem from="1620807825786" duration="11773000" />
+      <workItem from="1620837587888" duration="2002000" />
+      <workItem from="1620974262368" duration="2954000" />
+      <workItem from="1621242973054" duration="4635000" />
+      <workItem from="1621326445505" duration="7024000" />
+      <workItem from="1621357470850" duration="89000" />
+      <workItem from="1621406826845" duration="5710000" />
     </task>
     <servers />
   </component>

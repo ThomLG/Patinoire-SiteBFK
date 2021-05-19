@@ -21,12 +21,21 @@ class UserController extends AbstractController
     /**
      * @Route ("/staff_sportif", name="staff")
      */
-
     public function showStaff(UserRepository $userRepository):Response {
-        $coaches=$userRepository->findUserrByFonction("Entraineur");
+        $coaches=$userRepository->findUserByRole("ROLE_ADMIN");
         return $this->render('coaches/index.html.twig',[
             'coaches'=>$coaches
         ]);
 
+    }
+
+    /**
+     * @Route ("/conseil_administration", name="conseil_administration")
+     */
+    public function showConseilAdmin(UserRepository $userRepository):Response{
+        $conseiladmins=$userRepository->findUserByRole("ROLE_ADMIN");
+        return $this->render('conseil_administration/index.html.twig',[
+            'conseiladmins'=>$conseiladmins
+        ]);
     }
 }

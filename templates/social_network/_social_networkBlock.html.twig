@@ -1,0 +1,16 @@
+<div class="socialNetworkContainer">
+    <h2 class="socialNetworkTitle">Suivez-nous!</h2>
+    <div class="socialNetworkLinkContainer">
+        {% for socialNetwork in socialNetworks %}
+            <a class="socialNetworkLink" href="{{ socialNetwork.socialNetworkLink }}" target="blank">
+                {% if socialNetwork.socialNetworkName =="Twitter" %}
+                    <i class="fa fa-twitter"></i>
+                {% elseif socialNetwork.socialNetworkName =="Instagram" %}
+                    <i class="fa fa-instagram"></i>
+                {% elseif socialNetwork.socialNetworkName =="Facebook" %}
+                    <i class="fa fa-facebook"></i>
+                {% endif %}
+            </a>
+        {% endfor %}
+    </div>
+</div>

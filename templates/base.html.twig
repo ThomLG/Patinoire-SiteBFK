@@ -21,33 +21,36 @@
         </div>
     </div>
 
-        {% if app.user %} {# si l'user est connecté #}
-            <div class="connectionContainerConnected">
-                <div class="mb-3">
-                    {{ app.user.firstName }} {{ app.user.lastName }}
-                </div>
-                <a class="dropdown-item" href="{{ path('admin') }}">
-                    <i class="fa fa-user">
-                    </i>
-                    Gestion des contenus
-                </a>
-                <a class="dropdown-item" href="{{ path('match_convocation') }}">
-                    <i class="fa fa-football-ball">
-                    </i>
-                    Convocations
-                </a>
-                <a class="dropdown-item" href="{{ path('app_logout') }}">
-                    <i class="fa fa-sign-out">
-                    </i>
-                    Se déconnecter
-                </a>
+    {% if app.user %} {# si l'user est connecté #}
+        <div class="connectionContainerConnected">
+            <div class="mb-3">
+                {{ app.user.firstName }} {{ app.user.lastName }}
             </div>
-        {% else %} {# si l'user n'est pas connecté #}
-            <a class="connectionContainer dropdown-item" href="{{ path('app_login') }}">
-                <i class="fa fa-sign-in"></i>
-                Se connecter
+            <a class="dropdown-item" href="{{ path('admin') }}">
+                <i class="fa fa-user">
+                </i>
+                Gestion des contenus
             </a>
-        {% endif %}
+            <a class="dropdown-item" href="{{ path('match_convocation') }}">
+                <i class="fa fa-football-ball">
+                </i>
+                Convocations
+            </a>
+            <a class="dropdown-item" href="{{ path('app_logout') }}">
+                <i class="fa fa-sign-out">
+                </i>
+                Se déconnecter
+            </a>
+        </div>
+    {% else %} {# si l'user n'est pas connecté #}
+        <a class="connectionContainer dropdown-item" href="{{ path('app_login') }}">
+            <i class="fa fa-sign-in"></i>
+            Se connecter
+        </a>
+    {% endif %}
+    {{ render(controller(
+        'App\\Controller\\SocialNetworkController::socialnetworkblock'
+    )) }}
 
     {# Barre de navigation #}
     <nav class="bfkNavbar navbar navbar-expand-lg navbar-light">

@@ -10,6 +10,7 @@ use App\Entity\Novelty;
 use App\Entity\Partner;
 use App\Entity\Player;
 use App\Entity\Preinscription;
+use App\Entity\SocialNetworks;
 use App\Entity\Stadium;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
@@ -52,6 +53,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Préinscriptions','iconclass',Preinscription::class);//ajout du CRUD de l'entité Preinscription dans le menu du dashboard easyadmin
         yield MenuItem::linkToCrud('Catégories', 'iconclass', Category::class);
         yield MenuItem::linkToRoute('Retour au site','fa fa-home','homepage');// ajout d'un lien de redirection vers la page d'accueil du site web
+        yield MenuItem::linkToCrud('Réseaux Sociaux','fa fa-home',SocialNetworks::class);
     }
 
     public function configureAssets(): Assets

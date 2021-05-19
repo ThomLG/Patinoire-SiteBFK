@@ -17,16 +17,19 @@ xmlhttp.onreadystatechange = () => {
             Object.entries(data).forEach(stadium => {
                     //personnalisation des marqueurs (image, taille, etc.)
                     let myMarker = L.popup({
+
                     });
                     //affichage des pop-up
                     let marker = L.marker([stadium[1].latitude, stadium[1].longitude],
                         {
                             popup: myMarker,
+                            className: "leaflet-marker-icon"
                         }).addTo(map);
                     marker.bindPopup("<p>"+stadium[1].name+"</p>",{
                         closeButton:false,
                         closeOnClick: false,
                         closeOnEscapeKey:false,
+                        className:"leaflet-popup"
                 });
                 });
         } else {
