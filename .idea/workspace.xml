@@ -5,12 +5,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/footer/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/footer/footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/FootballMatchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FootballMatchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventSubscriber/EasyAdminSubscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventSubscriber/EasyAdminSubscriber.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/FootballMatchRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/FootballMatchRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/stadium/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stadium/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,9 +29,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SCSS File" />
-        <option value="Twig" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Twig" />
       </list>
     </option>
   </component>
@@ -236,7 +239,21 @@
       <workItem from="1621242973054" duration="4635000" />
       <workItem from="1621326445505" duration="7024000" />
       <workItem from="1621357470850" duration="89000" />
-      <workItem from="1621406826845" duration="5710000" />
+      <workItem from="1621406826845" duration="6912000" />
+      <workItem from="1621926815637" duration="596000" />
+      <workItem from="1622466736598" duration="447000" />
+      <workItem from="1622475355403" duration="56000" />
+      <workItem from="1622475941704" duration="594000" />
+      <workItem from="1623227256842" duration="388000" />
+      <workItem from="1623227728924" duration="3755000" />
+      <workItem from="1623244127369" duration="3621000" />
+      <workItem from="1623249881326" duration="1204000" />
+      <workItem from="1623319905808" duration="54000" />
+      <workItem from="1623675048803" duration="4243000" />
+      <workItem from="1623748982245" duration="98000" />
+      <workItem from="1623762341169" duration="6118000" />
+      <workItem from="1623853046059" duration="4260000" />
+      <workItem from="1623917202441" duration="3472000" />
     </task>
     <servers />
   </component>

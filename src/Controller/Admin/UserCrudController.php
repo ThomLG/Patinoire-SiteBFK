@@ -31,7 +31,7 @@ class UserCrudController extends AbstractCrudController
     {
             $out =[EmailField::new('email','E-mail')];
 
-            //modification
+            // si le mot de passe est modifié
             if ($pageName !=='index') {
                 $out[] = TextField::new('plainPassword')
                     ->setLabel('Mot de passe')
@@ -40,6 +40,7 @@ class UserCrudController extends AbstractCrudController
             }
 
             return array_merge($out,[
+            //array_merge() rassemble les éléments d'un ou de plusieurs tableaux en ajoutant les valeurs de l'un à la fin de l'autre
             ArrayField::new('roles','Rôle'),
             TextField::new('function', 'Fonction'),
             TextField::new('firstName', 'Prénom'),

@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+{% block title %}Calendrier | Site Officiel du Breizh Fobal Klub{% endblock %}
+
+{% block content %}
+
+    <div class="main">
+            <ul>
+        {% for calendar in calendars %}
+            <li>{{ calendar.footballMatchDate|date("d/m/Y")}} : {{ calendar.bfkTeam }}-{{ calendar.bfkTeamOpponent }}</li>
+        {% endfor %}
+            </ul>
+    </div>
+
+{% endblock %}
+
+

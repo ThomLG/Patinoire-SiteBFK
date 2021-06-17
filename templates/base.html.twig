@@ -91,7 +91,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="{{ path('results') }}">Résultats</a>
-                        <a class="dropdown-item" href="#">Calendrier</a>
+                        <a class="dropdown-item" href="{{ path('calendar') }}">Calendrier</a>
                     </div>
                 </li>
                 <li class="nav-item  dropdown">
@@ -134,7 +134,7 @@
 )) }}
 
 <footer class="footerContainer">
-    Mentions légales
+    <a class ="legalMentions" href="{{ path('legal_mentions')}}">Mentions légales</a>
 </footer>
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}

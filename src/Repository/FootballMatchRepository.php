@@ -19,22 +19,17 @@ class FootballMatchRepository extends ServiceEntityRepository
         parent::__construct($registry, FootballMatch::class);
     }
 
-    // /**
-    //  * @return FootballMatch[] Returns an array of FootballMatch objects
-    //  */
-    /*
-    public function findByExampleField($value)
+ /**
+  * @return FootballMatch[]
+  */
+    public function findByResult()
     {
-        return $this->createQueryBuilder('f')
-            ->andWhere('f.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('f.id', 'ASC')
-            ->setMaxResults(10)
+        return $this
+            ->createQueryBuilder('score')
+            ->where('score.result IS NOT NULL')
             ->getQuery()
-            ->getResult()
-        ;
+            ->getResult();
     }
-    */
 
     /*
     public function findOneBySomeField($value): ?FootballMatch

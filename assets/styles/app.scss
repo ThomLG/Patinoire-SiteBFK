@@ -85,10 +85,6 @@ body {
   margin: 5px;
 }
 
-.noveltyTitleList{
-  list-style-type: none;
-}
-
 .noveltyTitle{
   color: black;
 }
@@ -172,6 +168,35 @@ body {
 
 .stadiumSection h3 {
   font-size: 14pt;
+}
+
+//------------------------Mise en page login-----------------------------------------------------------
+
+.loginContent {
+  display: block;
+  border: solid 2px black;
+  margin: 5px auto 5px auto;
+
+  .loginTitle {
+    background-color: black;
+    border: solid 1px red;
+    color: white;
+    display: block;
+    text-align: center;
+  }
+  .loginBtn{
+    background-color: black;
+    border: solid 1px red;
+    color: #cccccc;
+    display: block;
+    margin: 5px auto;
+  }
+  .loginInput{
+    display: block;
+    border-color: red;
+    margin: 2px 2px auto !important;
+    width: auto;
+  }
 }
 
 //-------------------------Mise en page histoire du club-----------------------------------------------
@@ -267,7 +292,22 @@ body {
   text-transform: uppercase;
 }
 
+.legalMentionsDivContainer{
+  margin: 10px;
+}
 
+.legalMentionsTitle{
+  text-align: center;
+}
+
+.legalMentionsSecondaryTitle{
+  font-size: 20pt;
+  margin: 5px;
+}
+
+.legalMentionsListContainer{
+  margin: 5px;
+}
 
 //------------------------ à partir de 768 px et plus, il passe en flex-direction row----------------------------
 @media screen and (min-width: 768px) {

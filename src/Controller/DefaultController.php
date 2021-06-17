@@ -31,5 +31,14 @@ class DefaultController extends AbstractController
             'novelties'=>$novelties,
         ]);
     }
+
+    /**
+     * @Route("/mentions_legales", name="legal_mentions")
+     */
+    public function mentionsLegales():Response
+    {
+        // Nous générons la vue de la page des mentions légales
+        return $this->render('legal_mentions/legal_mentions.html.twig');
+    }
 }
 

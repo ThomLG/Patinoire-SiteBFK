@@ -31,6 +31,11 @@ class User implements UserInterface
     private $roles = [];
 
     private $plainPassword;
+    /*Ce champ n'est pas persisté (enregistré en bdd) :
+    (notez qu'il n'y a pas de @ORM\Column au-dessus (colonne de base de donnée).
+    Il stocke temporairement le mot de passe en clair du formulaire d'inscription.
+    Ce champ peut être validé et sert ensuite à renseigner le champ mot de passe
+    */
 
     /**
      * @var string The hashed password
