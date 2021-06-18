@@ -1,3 +1,52 @@
-:root{
+:root {
     --body-bg: white;
+    --font-family-base: Poppins;
+
+}
+
+.easyadminMenuBackground {
+    background-color: black;
+    border: solid 2px red;
+}
+
+.test {
+font-family: Rambla;
+}
+
+.test a{
+    color: white;
+}
+
+.test a:hover{
+    color: grey;
+}
+
+.easyAdminMenuIcon{
+    color: white;
+}
+
+.content{
+    color: purple;
+}
+
+.easyAdminTitle{
+    color: #00bb00;
+    text-align: center;
+}
+
+.easyAdminTitlePrime{
+    background-color: black;
+    border: solid 2px red;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.easyAdminTitlePrime h1{
+    color: white;
+    font-family: Rambla;
+    font-size: 30pt;
+    text-align: center;
+    text-transform:uppercase;
+
 }

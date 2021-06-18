@@ -37,3 +37,8 @@ security:
     access_control:
          - { path: ^/admin, roles: ROLE_ADMIN } #seule un ROLE_ADMIN peut aller sur la route /admin
          - { path: ^/profile, roles: ROLE_USER }
+
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_ADMIN
+        ROLE_COACH: ROLE_USER
+

@@ -22,7 +22,7 @@ class UserController extends AbstractController
      * @Route ("/staff_sportif", name="staff")
      */
     public function showStaff(UserRepository $userRepository):Response {
-        $coaches=$userRepository->findUserByRole("ROLE_ADMIN");
+        $coaches=$userRepository->findUserByRole("ROLE_COACH");
         return $this->render('coaches/index.html.twig',[
             'coaches'=>$coaches
         ]);

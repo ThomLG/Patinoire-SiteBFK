@@ -41,10 +41,16 @@ class UserCrudController extends AbstractCrudController
 
             return array_merge($out,[
             //array_merge() rassemble les éléments d'un ou de plusieurs tableaux en ajoutant les valeurs de l'un à la fin de l'autre
-            ArrayField::new('roles','Rôle'),
-            TextField::new('function', 'Fonction'),
             TextField::new('firstName', 'Prénom'),
             TextField::new('lastName', 'Nom'),
+            ChoiceField::new('roles','Rôle')
+                ->allowMultipleChoices()
+                ->renderExpanded()
+                ->setChoices([
+                'Conseil Administration'=>'ROLE_ADMIN',
+                'Staff Sportif'=>'ROLE_COACH'
+            ]),
+            TextField::new('function', 'Fonction'),
             ImageField::new('photoUser', 'Photo dirigeant')
                 ->setUploadDir('public/uploads/players_photos')
             ]);

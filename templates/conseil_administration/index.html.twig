@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Conseil Administration | Site Officiel du Breizh Fobal Klub{% endblock %}
+
+{% block content %}
+    <div class="main">
+        <h1 class="titlePage">Conseil Administration</h1>
+        <div class="playerContent">
+            {% for conseiladmin in conseiladmins %}
+                <section class="playerCard card">
+                    <img class="card-img-top" src="{{ asset('uploads/players_photos/' ~ conseiladmin.photoUser) }}"
+                         alt="mm">
+                    <div class="playerCardBody card-body">
+                        <h3 class="card-title">{{ conseiladmin.firstName }} {{ conseiladmin.lastName }}</h3>
+                        <p class="card-text">Fonction : {{ conseiladmin.function }}</p>
+                    </div>
+                </section>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
