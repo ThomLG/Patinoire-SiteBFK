@@ -15,7 +15,7 @@
                         <img src="{{ asset('uploads/photo_matches/' ~ matcharticle.mathPhoto) }}"
                                  alt="{{ matcharticle.articleTitle }}">
                         <div>
-                            <a href="{{ path('match_articles') }}">{{ matcharticle.articleTitle }}</a>
+                            <a href="{{ path('match_id',{'id': matcharticle.id}) }}">{{ matcharticle.articleTitle }}</a>
                         </div>
                     {% endfor %}
                 </section>

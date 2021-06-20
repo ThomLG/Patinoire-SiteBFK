@@ -22,6 +22,7 @@ class StadiumCrudController extends AbstractCrudController
             TextField::new('stadiumAdress','Adresse'),
             TextField::new('stadiumCity','Ville'),
             TextField::new('stadiumPostalCode','Code postal'),
+            ImageField::new('stadiumPhoto', 'Photo')->setUploadDir('public/uploads/infrastructures'),
             TextField::new('longitude','Longitude'),
             TextField::new('latitude','Latitude'),
         ];

@@ -64,9 +64,10 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 900px) {
   .partnerContent {
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
   }
 
@@ -76,6 +77,7 @@
     object-fit: contain;
     padding: 10px;
   }
+
 
   .partnerCardContent {
     display: flex;

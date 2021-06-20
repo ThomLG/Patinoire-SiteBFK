@@ -2,8 +2,10 @@
 
 {% block title %}Page non trouvée{% endblock %}
 
-{% block body %}
+{% block content %}
+
 <h1>Page non trouvée</h1>
 
-<p>La page que vous cherchez n'existe pas ou n'est pas accessible</p>
+<p>La page que vous cherchez n'existe pas ou n'est pas accessible. Retour à la <a href="{{ path('homepage') }}">page d'accueil</a>
+</p>
 {% endblock %}

@@ -47,6 +47,11 @@ class Stadium
      */
     private $latitude;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $stadiumPhoto;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +125,18 @@ class Stadium
     public function setLatitude(string $latitude): self
     {
         $this->latitude = $latitude;
+
+        return $this;
+    }
+
+    public function getStadiumPhoto(): ?string
+    {
+        return $this->stadiumPhoto;
+    }
+
+    public function setStadiumPhoto(?string $stadiumPhoto): self
+    {
+        $this->stadiumPhoto = $stadiumPhoto;
 
         return $this;
     }

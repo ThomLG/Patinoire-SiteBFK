@@ -2,70 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b51db68-9bfb-4284-bc2c-0794c52de261" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/action.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/detail.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/array.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/association.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/avatar.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/boolean.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/choice.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/code_editor.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/collection.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/color.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/country.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/currency.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/date.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/datetime.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/email.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/generic.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/hidden.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/id.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/image.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/integer.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/language.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/locale.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/money.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/number.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/percent.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/telephone.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/text.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/text_editor.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/textarea.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/time.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/timezone.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/field/url.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/filters.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/form_theme.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/includes/_batch_action_modal.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/includes/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/includes/_filters_modal.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/includes/_select2_widget.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/crud/paginator.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/exception.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/flash_messages.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/inspector/data_collector.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/inspector/icon.svg.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/label/empty.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/label/inaccessible.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/label/null.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/label/undefined.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/layout.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/menu.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/page/content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/page/login.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/page/login_minimal.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/welcome.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/partners/_partners.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/partners/_partners.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/infrastructures/berry_stade.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/infrastructures/berry_stade.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/infrastructures/paul_larfague.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/infrastructures/paul_larfague.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/StadiumCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/StadiumCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Stadium.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Stadium.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/stadium/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stadium/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,8 +46,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/DataFixtures/PartnerFixtures.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/templates/partner/index.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/DataFixtures/PartnerFixtures.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/assets/styles/partners/_partners.scss" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -310,6 +258,10 @@
       <workItem from="1623939939692" duration="5860000" />
       <workItem from="1624000638181" duration="3929000" />
       <workItem from="1624010675387" duration="6435000" />
+      <workItem from="1624027754635" duration="653000" />
+      <workItem from="1624089056788" duration="2637000" />
+      <workItem from="1624127632668" duration="2021000" />
+      <workItem from="1624181288133" duration="2366000" />
     </task>
     <servers />
   </component>
