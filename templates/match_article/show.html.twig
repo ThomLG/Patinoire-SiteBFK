@@ -1,10 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Match XXX| Site Officiel du Breizh Fobal Klub{% endblock %}
+{% block title %}{{ matchId.articleTitle }}| Site Officiel du Breizh Fobal Klub{% endblock %}
 
 {% block content %}
+    <div class="main">
 
-<h1>Test</h1>
-
-
+        <h1 class="matchTitle">{{ matchId.articleTitle }}</h1>
+        <p class="matchArticle">{{ matchId.articleDescription }}</p>
+        <div class="matchArticlePhotoContainer">
+        <img class="matchArticlePhoto" src="{{ asset('uploads/photo_matches/' ~ matchId.mathPhoto) }}">
+        </div>
+    </div>
 {% endblock %}

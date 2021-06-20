@@ -3,17 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0b51db68-9bfb-4284-bc2c-0794c52de261" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/partners/_partners.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/partners/_partners.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/infrastructures/berry_stade.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/infrastructures/berry_stade.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/infrastructures/paul_larfague.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/infrastructures/paul_larfague.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/StadiumCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/StadiumCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Stadium.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Stadium.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/stadium/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stadium/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/match_article/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/match_article/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/novelty/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/novelty/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +253,7 @@
       <workItem from="1624027754635" duration="653000" />
       <workItem from="1624089056788" duration="2637000" />
       <workItem from="1624127632668" duration="2021000" />
-      <workItem from="1624181288133" duration="2366000" />
+      <workItem from="1624181288133" duration="7272000" />
     </task>
     <servers />
   </component>
