@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b51db68-9bfb-4284-bc2c-0794c52de261" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/match_article/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/match_article/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/novelty/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/novelty/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -253,7 +251,7 @@
       <workItem from="1624027754635" duration="653000" />
       <workItem from="1624089056788" duration="2637000" />
       <workItem from="1624127632668" duration="2021000" />
-      <workItem from="1624181288133" duration="7272000" />
+      <workItem from="1624181288133" duration="7572000" />
     </task>
     <servers />
   </component>
